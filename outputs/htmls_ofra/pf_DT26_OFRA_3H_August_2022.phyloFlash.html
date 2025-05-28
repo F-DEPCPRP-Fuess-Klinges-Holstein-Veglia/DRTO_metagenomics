@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<!--This is a template file for phyloFlash v3.1 report output.
+    Comment tags in all-uppercase are flags to the write_report_html
+    function in phyloFlash.pl to substitute field values for a
+    given phyloFlash run. -->
+<html>
+<head>
+<title>phyloFlash results summary for library pf_DT26_OFRA_3H_August_2022</title>
+
+<script language="javascript" type="text/javascript">
+// adapted from http://www.cssnewbie.com/example/showhide-content/
+function showHide(shID) {
+  if (document.getElementById(shID)) {
+    if (document.getElementById(shID).style.display == 'none') {
+      document.getElementById(shID).style.display = 'block';
+    }
+    else {
+      document.getElementById(shID).style.display = 'none';
+    }
+  }
+}
+
+function hideShow(hsID) {
+  if (document.getElementById(hsID)) {
+    if (document.getElementById(hsID).style.display == 'block') {
+      document.getElementById(hsID).style.display = 'none';
+    }
+    else {
+      document.getElementById(hsID).style.display = 'block';
+    }
+  }
+}
+</script>
+
+<!--SUPPRESS_IF_NO_TREEMAP-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['treemap']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string','ID');
+  data.addColumn('string','Parent');
+  data.addColumn('number','NumReads');
+  data.addRows([
+['Cellular organisms',	,	0],
+['Bacteria',	'Cellular organisms',	0],
+['Archaea',	'Cellular organisms',	0],
+['Eukaryota',	'Cellular organisms',	0],
+['Bacteria;Acidobacteriota',	'Bacteria',	0],
+['Bacteria;Bacteroidota',	'Bacteria',	0],
+['Bacteria;Campylobacterota',	'Bacteria',	0],
+['Bacteria;Cloacimonadota',	'Bacteria',	0],
+['Bacteria;Cyanobacteria',	'Bacteria',	0],
+['Bacteria;Desulfobacterota',	'Bacteria',	0],
+['Bacteria;Firmicutes',	'Bacteria',	0],
+['Bacteria;Halanaerobiaeota',	'Bacteria',	0],
+['Bacteria;Patescibacteria',	'Bacteria',	0],
+['Bacteria;Proteobacteria',	'Bacteria',	0],
+['Bacteria;Spirochaetota',	'Bacteria',	0],
+['Bacteria;_Bacteria_',	'Bacteria',	0],
+['Bacteria;Acidobacteriota;Blastocatellia',	'Bacteria;Acidobacteriota',	0],
+['Bacteria;Acidobacteriota;_Acidobacteriota_',	'Bacteria;Acidobacteriota',	0],
+['Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales',	'Bacteria;Acidobacteriota;Blastocatellia',	0],
+['Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae',	'Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales',	0],
+['Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;Blastocatella',	'Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae',	0],
+['Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;Blastocatella;_Blastocatella_',	'Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;Blastocatella',	2],
+['Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_',	'Bacteria;Acidobacteriota;_Acidobacteriota_',	0],
+['Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_',	'Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_',	0],
+['Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_',	'Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_',	0],
+['Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_',	'Bacteria;Acidobacteriota;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_;_Acidobacteriota_',	1],
+['Bacteria;Bacteroidota;Bacteroidia',	'Bacteria;Bacteroidota',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales',	'Bacteria;Bacteroidota;Bacteroidia',	0],
+['Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_',	'Bacteria;Bacteroidota;Bacteroidia',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Amoebophilaceae',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Cyclobacteriaceae',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Amoebophilaceae;uncultured',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Amoebophilaceae',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Amoebophilaceae;uncultured;uncultured_bacterium',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Amoebophilaceae;uncultured',	1],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Cyclobacteriaceae;uncultured',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Cyclobacteriaceae',	0],
+['Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Cyclobacteriaceae;uncultured;_uncultured_',	'Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Cyclobacteriaceae;uncultured',	2],
+['Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_;_Bacteroidia_',	'Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_',	0],
+['Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_;_Bacteroidia_;_Bacteroidia_',	'Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_;_Bacteroidia_',	0],
+['Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_;_Bacteroidia_;_Bacteroidia_;_Bacteroidia_',	'Bacteria;Bacteroidota;Bacteroidia;_Bacteroidia_;_Bacteroidia_;_Bacteroidia_',	1],
+['Bacteria;Campylobacterota;Campylobacteria',	'Bacteria;Campylobacterota',	0],
+['Bacteria;Campylobacterota;Campylobacteria;Campylobacterales',	'Bacteria;Campylobacterota;Campylobacteria',	0],
+['Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurospirillaceae',	'Bacteria;Campylobacterota;Campylobacteria;Campylobacterales',	0],
+['Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurospirillaceae;Sulfurospirillum',	'Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurospirillaceae',	0],
+['Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurospirillaceae;Sulfurospirillum;uncultured_bacterium',	'Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurospirillaceae;Sulfurospirillum',	1],
+['Bacteria;Cloacimonadota;Cloacimonadia',	'Bacteria;Cloacimonadota',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2',	'Bacteria;Cloacimonadota;Cloacimonadia',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;_MSBL2_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_Spirochaetes_bacterium',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_bacterium',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;_MSBL2_;_MSBL2_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;_MSBL2_',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;_MSBL2_;_MSBL2_;_MSBL2_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;_MSBL2_;_MSBL2_',	4],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_Spirochaetes_bacterium;_uncultured_Spirochaetes_bacterium_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_Spirochaetes_bacterium',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_Spirochaetes_bacterium;_uncultured_Spirochaetes_bacterium_;_uncultured_Spirochaetes_bacterium_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_Spirochaetes_bacterium;_uncultured_Spirochaetes_bacterium_',	1],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_bacterium;_uncultured_bacterium_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_bacterium',	0],
+['Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_bacterium;_uncultured_bacterium_;_uncultured_bacterium_',	'Bacteria;Cloacimonadota;Cloacimonadia;MSBL2;uncultured_bacterium;_uncultured_bacterium_',	1],
+['Bacteria;Cyanobacteria;Cyanobacteriia',	'Bacteria;Cyanobacteria',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	'Bacteria;Cyanobacteria;Cyanobacteriia',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales',	'Bacteria;Cyanobacteria;Cyanobacteriia',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Apicomplexa_sp__WK_2018_Corallicola',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Nicotiana_sylvestris__wood_tobacco_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Ostreobium_sp__HV05042',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;_Chloroplast_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_bacterium',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_cyanobacterium',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Apicomplexa_sp__WK_2018_Corallicola;_Apicomplexa_sp__WK_2018_Corallicola_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Apicomplexa_sp__WK_2018_Corallicola',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Apicomplexa_sp__WK_2018_Corallicola;_Apicomplexa_sp__WK_2018_Corallicola_;_Apicomplexa_sp__WK_2018_Corallicola_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Apicomplexa_sp__WK_2018_Corallicola;_Apicomplexa_sp__WK_2018_Corallicola_',	3],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Nicotiana_sylvestris__wood_tobacco_;_Nicotiana_sylvestris__wood_tobacco__',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Nicotiana_sylvestris__wood_tobacco_',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Nicotiana_sylvestris__wood_tobacco_;_Nicotiana_sylvestris__wood_tobacco__;_Nicotiana_sylvestris__wood_tobacco__',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Nicotiana_sylvestris__wood_tobacco_;_Nicotiana_sylvestris__wood_tobacco__',	1],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Ostreobium_sp__HV05042;_Ostreobium_sp__HV05042_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Ostreobium_sp__HV05042',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Ostreobium_sp__HV05042;_Ostreobium_sp__HV05042_;_Ostreobium_sp__HV05042_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;Ostreobium_sp__HV05042;_Ostreobium_sp__HV05042_',	18],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;_Chloroplast_;_Chloroplast_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;_Chloroplast_',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;_Chloroplast_;_Chloroplast_;_Chloroplast_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;_Chloroplast_;_Chloroplast_',	22],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_bacterium;_uncultured_bacterium_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_bacterium',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_bacterium;_uncultured_bacterium_;_uncultured_bacterium_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_bacterium;_uncultured_bacterium_',	2],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_cyanobacterium;_uncultured_cyanobacterium_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_cyanobacterium',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_cyanobacterium;_uncultured_cyanobacterium_;_uncultured_cyanobacterium_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast;uncultured_cyanobacterium;_uncultured_cyanobacterium_',	2],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales;Cyanobiaceae',	'Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales;Cyanobiaceae;_Cyanobiaceae_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales;Cyanobiaceae',	0],
+['Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales;Cyanobiaceae;_Cyanobiaceae_;_Cyanobiaceae_',	'Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales;Cyanobiaceae;_Cyanobiaceae_',	1],
+['Bacteria;Desulfobacterota;Desulfobacteria',	'Bacteria;Desulfobacterota',	0],
+['Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales',	'Bacteria;Desulfobacterota;Desulfobacteria',	0],
+['Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales;Desulfococcaceae',	'Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales',	0],
+['Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales;Desulfococcaceae;Desulfonema',	'Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales;Desulfococcaceae',	0],
+['Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales;Desulfococcaceae;Desulfonema;uncultured_organism',	'Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales;Desulfococcaceae;Desulfonema',	1],
+['Bacteria;Firmicutes;Bacilli',	'Bacteria;Firmicutes',	0],
+['Bacteria;Firmicutes;Bacilli;Staphylococcales',	'Bacteria;Firmicutes;Bacilli',	0],
+['Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae',	'Bacteria;Firmicutes;Bacilli;Staphylococcales',	0],
+['Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae;Staphylococcus',	'Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae',	0],
+['Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae;Staphylococcus;Staphylococcus_aureus',	'Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae;Staphylococcus',	1],
+['Bacteria;Halanaerobiaeota;Halanaerobiia',	'Bacteria;Halanaerobiaeota',	0],
+['Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales',	'Bacteria;Halanaerobiaeota;Halanaerobiia',	0],
+['Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales;Halanaerobiaceae',	'Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales',	0],
+['Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales;Halanaerobiaceae;Halanaerobium',	'Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales;Halanaerobiaceae',	0],
+['Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales;Halanaerobiaceae;Halanaerobium;_Halanaerobium_',	'Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales;Halanaerobiaceae;Halanaerobium',	2],
+['Bacteria;Patescibacteria;Saccharimonadia',	'Bacteria;Patescibacteria',	0],
+['Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales',	'Bacteria;Patescibacteria;Saccharimonadia',	0],
+['Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;uncultured_bacterium',	'Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales',	0],
+['Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;uncultured_bacterium;_uncultured_bacterium_',	'Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;uncultured_bacterium',	0],
+['Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;uncultured_bacterium;_uncultured_bacterium_;_uncultured_bacterium_',	'Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;uncultured_bacterium;_uncultured_bacterium_',	1],
+['Bacteria;Proteobacteria;Alphaproteobacteria',	'Bacteria;Proteobacteria',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria',	'Bacteria;Proteobacteria',	0],
+['Bacteria;Proteobacteria;_Proteobacteria_',	'Bacteria;Proteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;uncultured',	'Bacteria;Proteobacteria;Alphaproteobacteria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11;uncultured_Alphaproteobacteria_bacterium',	'Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11;uncultured_Alphaproteobacteria_bacterium;_uncultured_Alphaproteobacteria_bacterium_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11;uncultured_Alphaproteobacteria_bacterium',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11;uncultured_Alphaproteobacteria_bacterium;_uncultured_Alphaproteobacteria_bacterium_;_uncultured_Alphaproteobacteria_bacterium_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Dstr_E11;uncultured_Alphaproteobacteria_bacterium;_uncultured_Alphaproteobacteria_bacterium_',	1],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales;Kiloniellaceae',	'Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales;Kiloniellaceae;Tistlia',	'Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales;Kiloniellaceae',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales;Kiloniellaceae;Tistlia;_Tistlia_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales;Kiloniellaceae;Tistlia',	3],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae;uncultured',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae;uncultured;uncultured_Alphaproteobacteria_bacterium',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae;uncultured',	1],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae;uncultured;uncultured_bacterium',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales;Terasakiellaceae;uncultured',	1],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;Porites_astreoides',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;_Mitochondria_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;Porites_astreoides;_Porites_astreoides_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;Porites_astreoides',	3],
+['Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;_Mitochondria_;_Mitochondria_',	'Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;_Mitochondria_',	2],
+['Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_;_Alphaproteobacteria_',	'Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_;_Alphaproteobacteria_;_Alphaproteobacteria_',	'Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_;_Alphaproteobacteria_',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_;_Alphaproteobacteria_;_Alphaproteobacteria_;_Alphaproteobacteria_',	'Bacteria;Proteobacteria;Alphaproteobacteria;_Alphaproteobacteria_;_Alphaproteobacteria_;_Alphaproteobacteria_',	2],
+['Bacteria;Proteobacteria;Alphaproteobacteria;uncultured;uncultured_bacterium',	'Bacteria;Proteobacteria;Alphaproteobacteria;uncultured',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;uncultured;uncultured_bacterium;_uncultured_bacterium_',	'Bacteria;Proteobacteria;Alphaproteobacteria;uncultured;uncultured_bacterium',	0],
+['Bacteria;Proteobacteria;Alphaproteobacteria;uncultured;uncultured_bacterium;_uncultured_bacterium_;_uncultured_bacterium_',	'Bacteria;Proteobacteria;Alphaproteobacteria;uncultured;uncultured_bacterium;_uncultured_bacterium_',	1],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales',	'Bacteria;Proteobacteria;Gammaproteobacteria',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales',	'Bacteria;Proteobacteria;Gammaproteobacteria',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Alteromonadaceae',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Pasteurellaceae',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Alteromonadaceae;Alishewanella',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Alteromonadaceae',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Alteromonadaceae;Alishewanella;_Alishewanella_',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Alteromonadaceae;Alishewanella',	1],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Pasteurellaceae;Haemophilus',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Pasteurellaceae',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Pasteurellaceae;Haemophilus;uncultured_bacterium',	'Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Pasteurellaceae;Haemophilus',	1],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae',	'Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae;Endozoicomonas',	'Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae',	0],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae;Endozoicomonas;_Endozoicomonas_',	'Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae;Endozoicomonas',	1],
+['Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae;Endozoicomonas;uncultured_bacterium',	'Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Endozoicomonadaceae;Endozoicomonas',	2],
+['Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_',	'Bacteria;Proteobacteria;_Proteobacteria_',	0],
+['Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_',	'Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_',	0],
+['Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_',	'Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_',	0],
+['Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_',	'Bacteria;Proteobacteria;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_;_Proteobacteria_',	1],
+['Bacteria;Spirochaetota;Spirochaetia',	'Bacteria;Spirochaetota',	0],
+['Bacteria;Spirochaetota;Spirochaetia;Spirochaetales',	'Bacteria;Spirochaetota;Spirochaetia',	0],
+['Bacteria;Spirochaetota;Spirochaetia;Spirochaetales;Spirochaetaceae',	'Bacteria;Spirochaetota;Spirochaetia;Spirochaetales',	0],
+['Bacteria;Spirochaetota;Spirochaetia;Spirochaetales;Spirochaetaceae;Alkalispirochaeta',	'Bacteria;Spirochaetota;Spirochaetia;Spirochaetales;Spirochaetaceae',	0],
+['Bacteria;Spirochaetota;Spirochaetia;Spirochaetales;Spirochaetaceae;Alkalispirochaeta;uncultured_organism',	'Bacteria;Spirochaetota;Spirochaetia;Spirochaetales;Spirochaetaceae;Alkalispirochaeta',	1],
+['Bacteria;_Bacteria_;_Bacteria_',	'Bacteria;_Bacteria_',	0],
+['Bacteria;_Bacteria_;_Bacteria_;_Bacteria_',	'Bacteria;_Bacteria_;_Bacteria_',	0],
+['Bacteria;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_',	'Bacteria;_Bacteria_;_Bacteria_;_Bacteria_',	0],
+['Bacteria;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_',	'Bacteria;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_',	0],
+['Bacteria;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_',	'Bacteria;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_;_Bacteria_',	4],
+['Eukaryota;Amorphea',	'Eukaryota',	0],
+['Eukaryota;Archaeplastida',	'Eukaryota',	0],
+['Eukaryota;SAR',	'Eukaryota',	0],
+['Eukaryota;_Eukaryota_',	'Eukaryota',	0],
+['Eukaryota;Amorphea;Amoebozoa',	'Eukaryota;Amorphea',	0],
+['Eukaryota;Amorphea;Obazoa',	'Eukaryota;Amorphea',	0],
+['Eukaryota;Amorphea;_Amorphea_',	'Eukaryota;Amorphea',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea',	'Eukaryota;Amorphea;Amoebozoa',	0],
+['Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis',	'Eukaryota;Amorphea;Amoebozoa',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia',	'Eukaryota;Amorphea;Amoebozoa;Discosea',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia',	'Eukaryota;Amorphea;Amoebozoa;Discosea',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia;Dactylopodida',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia;Dactylopodida;Korotnevella',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia;Dactylopodida',	1],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia;Dactylopodida;Paramoeba',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Flabellinia;Dactylopodida',	1],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia;Centramoebida',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia',	0],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia;Centramoebida;Acanthamoeba',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia;Centramoebida',	6],
+['Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia;Centramoebida;Balamuthia',	'Eukaryota;Amorphea;Amoebozoa;Discosea;Longamoebia;Centramoebida',	1],
+['Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis;Apusomonadidae',	'Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis',	0],
+['Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis;Apusomonadidae;Multimonas',	'Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis;Apusomonadidae',	0],
+['Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis;Apusomonadidae;Multimonas;Saccharina_japonica',	'Eukaryota;Amorphea;Amoebozoa;Incertae_Sedis;Apusomonadidae;Multimonas',	12],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta',	'Eukaryota;Amorphea;Obazoa',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa',	'Eukaryota;Amorphea;Obazoa;Opisthokonta',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea',	'Eukaryota;Amorphea;Obazoa;Opisthokonta',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;_Opisthokonta_',	'Eukaryota;Amorphea;Obazoa;Opisthokonta',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa',	1],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa',	5514],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;_Choanozoa_',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa',	4],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi',	14],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Zoopagomycota',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi',	1],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;_Fungi_',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi',	1],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;_Opisthokonta_;_Opisthokonta_',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;_Opisthokonta_',	0],
+['Eukaryota;Amorphea;Obazoa;Opisthokonta;_Opisthokonta_;_Opisthokonta_;_Opisthokonta_',	'Eukaryota;Amorphea;Obazoa;Opisthokonta;_Opisthokonta_;_Opisthokonta_',	115],
+['Eukaryota;Amorphea;_Amorphea_;_Amorphea_',	'Eukaryota;Amorphea;_Amorphea_',	0],
+['Eukaryota;Amorphea;_Amorphea_;_Amorphea_;_Amorphea_',	'Eukaryota;Amorphea;_Amorphea_;_Amorphea_',	0],
+['Eukaryota;Amorphea;_Amorphea_;_Amorphea_;_Amorphea_;_Amorphea_',	'Eukaryota;Amorphea;_Amorphea_;_Amorphea_;_Amorphea_',	0],
+['Eukaryota;Amorphea;_Amorphea_;_Amorphea_;_Amorphea_;_Amorphea_;_Amorphea_',	'Eukaryota;Amorphea;_Amorphea_;_Amorphea_;_Amorphea_;_Amorphea_',	71],
+['Eukaryota;Archaeplastida;Chloroplastida',	'Eukaryota;Archaeplastida',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae',	'Eukaryota;Archaeplastida',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta',	'Eukaryota;Archaeplastida;Chloroplastida',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta',	'Eukaryota;Archaeplastida;Chloroplastida',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;_Charophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta',	11],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;_Charophyta_;_Charophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta;_Charophyta_',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Charophyta;_Charophyta_;_Charophyta_;_Charophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Charophyta;_Charophyta_;_Charophyta_',	1],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Ulvophyceae',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;_Chlorophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Ulvophyceae;_Ulvophyceae_',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Ulvophyceae',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Ulvophyceae;_Ulvophyceae_;_Ulvophyceae_',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Ulvophyceae;_Ulvophyceae_',	1],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;_Chlorophyta_;_Chlorophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;_Chlorophyta_',	0],
+['Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;_Chlorophyta_;_Chlorophyta_;_Chlorophyta_',	'Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;_Chlorophyta_;_Chlorophyta_',	2],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales',	'Eukaryota;Archaeplastida;Rhodophyceae',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;Porphyra_Pyropia',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;_Bangiales_',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;Porphyra_Pyropia;_Porphyra_Pyropia_',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;Porphyra_Pyropia',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;Porphyra_Pyropia;_Porphyra_Pyropia_;_Porphyra_Pyropia_',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;Porphyra_Pyropia;_Porphyra_Pyropia_',	1],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;_Bangiales_;_Bangiales_',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;_Bangiales_',	0],
+['Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;_Bangiales_;_Bangiales_;_Bangiales_',	'Eukaryota;Archaeplastida;Rhodophyceae;Bangiales;_Bangiales_;_Bangiales_',	1],
+['Eukaryota;SAR;Alveolata',	'Eukaryota;SAR',	0],
+['Eukaryota;SAR;Rhizaria',	'Eukaryota;SAR',	0],
+['Eukaryota;SAR;Stramenopiles',	'Eukaryota;SAR',	0],
+['Eukaryota;SAR;_SAR_',	'Eukaryota;SAR',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa',	'Eukaryota;SAR;Alveolata',	0],
+['Eukaryota;SAR;Alveolata;Dinoflagellata',	'Eukaryota;SAR;Alveolata',	0],
+['Eukaryota;SAR;Alveolata;Protalveolata',	'Eukaryota;SAR;Alveolata',	0],
+['Eukaryota;SAR;Alveolata;_Alveolata_',	'Eukaryota;SAR;Alveolata',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida',	'Eukaryota;SAR;Alveolata;Apicomplexa',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida',	'Eukaryota;SAR;Alveolata;Apicomplexa',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;_Apicomplexa_',	'Eukaryota;SAR;Alveolata;Apicomplexa',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Haemosporoidia',	'Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Piroplasmorida',	'Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Haemosporoidia;Plasmodium',	'Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Haemosporoidia',	12],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Piroplasmorida;Theileria',	'Eukaryota;SAR;Alveolata;Apicomplexa;Aconoidasida;Piroplasmorida',	1],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida;Coccidia',	'Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida;Coccidia;Eimeriorina',	'Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida;Coccidia',	88],
+['Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida;Coccidia;_Coccidia_',	'Eukaryota;SAR;Alveolata;Apicomplexa;Conoidasida;Coccidia',	1],
+['Eukaryota;SAR;Alveolata;Apicomplexa;_Apicomplexa_;_Apicomplexa_',	'Eukaryota;SAR;Alveolata;Apicomplexa;_Apicomplexa_',	0],
+['Eukaryota;SAR;Alveolata;Apicomplexa;_Apicomplexa_;_Apicomplexa_;_Apicomplexa_',	'Eukaryota;SAR;Alveolata;Apicomplexa;_Apicomplexa_;_Apicomplexa_',	5],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae',	'Eukaryota;SAR;Alveolata;Dinoflagellata',	0],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae',	0],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniphycidae',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae',	0],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;_Dinophyceae_',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae',	0],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Suessiaceae',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae',	105],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniphycidae;Thoracosphaeraceae',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniphycidae',	1],
+['Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;_Dinophyceae_;_Dinophyceae_',	'Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;_Dinophyceae_',	4],
+['Eukaryota;SAR;Alveolata;Protalveolata;Syndiniales',	'Eukaryota;SAR;Alveolata;Protalveolata',	0],
+['Eukaryota;SAR;Alveolata;Protalveolata;Syndiniales;_Syndiniales_',	'Eukaryota;SAR;Alveolata;Protalveolata;Syndiniales',	0],
+['Eukaryota;SAR;Alveolata;Protalveolata;Syndiniales;_Syndiniales_;_Syndiniales_',	'Eukaryota;SAR;Alveolata;Protalveolata;Syndiniales;_Syndiniales_',	1],
+['Eukaryota;SAR;Alveolata;_Alveolata_;_Alveolata_',	'Eukaryota;SAR;Alveolata;_Alveolata_',	0],
+['Eukaryota;SAR;Alveolata;_Alveolata_;_Alveolata_;_Alveolata_',	'Eukaryota;SAR;Alveolata;_Alveolata_;_Alveolata_',	0],
+['Eukaryota;SAR;Alveolata;_Alveolata_;_Alveolata_;_Alveolata_;_Alveolata_',	'Eukaryota;SAR;Alveolata;_Alveolata_;_Alveolata_;_Alveolata_',	3],
+['Eukaryota;SAR;Rhizaria;Retaria',	'Eukaryota;SAR;Rhizaria',	0],
+['Eukaryota;SAR;Rhizaria;Retaria;Polycystinea',	'Eukaryota;SAR;Rhizaria;Retaria',	0],
+['Eukaryota;SAR;Rhizaria;Retaria;Polycystinea;Collodaria',	'Eukaryota;SAR;Rhizaria;Retaria;Polycystinea',	0],
+['Eukaryota;SAR;Rhizaria;Retaria;Polycystinea;Collodaria;Collosphaera',	'Eukaryota;SAR;Rhizaria;Retaria;Polycystinea;Collodaria',	2],
+['Eukaryota;SAR;Stramenopiles;Ochrophyta',	'Eukaryota;SAR;Stramenopiles',	0],
+['Eukaryota;SAR;Stramenopiles;Ochrophyta;_Ochrophyta_',	'Eukaryota;SAR;Stramenopiles;Ochrophyta',	0],
+['Eukaryota;SAR;Stramenopiles;Ochrophyta;_Ochrophyta_;_Ochrophyta_',	'Eukaryota;SAR;Stramenopiles;Ochrophyta;_Ochrophyta_',	0],
+['Eukaryota;SAR;Stramenopiles;Ochrophyta;_Ochrophyta_;_Ochrophyta_;_Ochrophyta_',	'Eukaryota;SAR;Stramenopiles;Ochrophyta;_Ochrophyta_;_Ochrophyta_',	1],
+['Eukaryota;SAR;_SAR_;_SAR_',	'Eukaryota;SAR;_SAR_',	0],
+['Eukaryota;SAR;_SAR_;_SAR_;_SAR_',	'Eukaryota;SAR;_SAR_;_SAR_',	0],
+['Eukaryota;SAR;_SAR_;_SAR_;_SAR_;_SAR_',	'Eukaryota;SAR;_SAR_;_SAR_;_SAR_',	0],
+['Eukaryota;SAR;_SAR_;_SAR_;_SAR_;_SAR_;_SAR_',	'Eukaryota;SAR;_SAR_;_SAR_;_SAR_;_SAR_',	3],
+['Eukaryota;_Eukaryota_;_Eukaryota_',	'Eukaryota;_Eukaryota_',	0],
+['Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_',	'Eukaryota;_Eukaryota_;_Eukaryota_',	0],
+['Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_',	'Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_',	0],
+['Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_',	'Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_',	0],
+['Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_',	'Eukaryota;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_;_Eukaryota_',	122],
+
+  ]);
+
+tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+
+  tree.draw(data, {
+    minColor: '#009688',
+    midColor: '#f7f7f7',
+    maxColor: '#ee8100',
+    highlightOnMouseOver: true,
+    minHighlightColor: '#ee8100',
+    midHighlightColor: '#f7f7f7',
+    maxHighlightColor: '#009688',
+    maxPostDepth: 2,
+    headerHeight: 15,
+    fontColor: 'black',
+    showScale: false,
+    generateTooltip: showFullTooltip
+  });
+
+  function showFullTooltip(row,size,value) {
+    return '<div style="background:white; padding:10px; border-style:none">' +
+    '<b>' + data.getValue(row, 0) + '</b><br>' +
+    'Total reads: ' + size + '</div>';
+  }
+
+}
+</script>
+<!--SUPPRESS_IF_NO_TREEMAP_END-->
+
+<style type="text/css">
+  body {
+    font-family: "Helvetica", "Gill Sans", "Gill Sans MT", sans-serif;
+    max-width:1200px;
+    margin:auto;
+  }
+
+  /*Tabular output*/
+  th {
+    background-color: #dee;
+    padding: .5em;
+    font-weight: bold;
+  }
+  td {
+    padding: 0em .5em 0em .5em;
+  }
+  table.slimTable th {
+    padding: 0em .5em 0em .5em;
+    font-weight: normal;
+    text-align: right;
+  }
+
+  .withHoverText {
+    text-decoration: none;
+    border-bottom: 1px grey dotted;
+  }
+
+  /*Show/hide on click*/
+  .more { display: none; }
+  .less { display: block; }
+  a.showLink { text-decoration: none; }
+  a.showLink:link { color: grey; }
+  a.showLink:visited { color: grey; }
+  a.showLink:hover { color: white;
+    background-color: grey;
+  }
+
+  /*Format code snippets*/
+  .code {
+    font-family:monospace;
+  }
+
+  /*Arrangement of graphical summary*/
+  .fullwidth {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    border: 0px solid grey;
+  }
+  .col20pc, .col40pc, .col50pc {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+    margin: 0;
+    border: 0px solid grey;
+  }
+  .col20pc { width:20%; }
+  .col40pc { width:40%; }
+  .col50pc { width:50%; }
+
+  /*Tooltip text for graphical summary*/
+  .tooltip .tooltiptext {
+    position: relative;
+    display: inline-block;
+    visibility: hidden;
+    width: 200px;
+    margin-left: -200px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    text-align: left;
+    padding: 5px;
+    font-size:12px;
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility:visible;
+  }
+</style>
+</head>
+<body>
+
+<h3><a href="https://github.com/HRGV/phyloFlash"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 971.097 996.31606"
+   height="60"
+   width="58.5">
+  <defs id="defs4" />
+  <metadata id="metadata7">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g transform="translate(139.80325,25.517248)" id="layer1">
+    <circle r="435.79376" cy="507.50507" cx="368" id="path3352" style="fill:#93aca7;fill-opacity:1;stroke:#dbe3e2;stroke-width:35;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path id="path3342" d="m 225.71429,522.3622 -68.57143,-7.14285 -61.428574,-50 -32.857143,-68.57143 20,-71.42857 L 151.42857,308.07649 162.85714,206.64792 250,179.50506 l 52.85714,31.42857 92.85715,-44.28571 71.42857,17.14286 22.85714,42.85714 102.85714,-20 37.14286,57.14286 60,41.42857 17.14286,68.57143 -31.42857,101.42857 -122.85715,42.85714 -41.42857,40 -55.71428,-2.85714 -70,25.71428 -107.85715,-17.14286 z" style="fill:#536c67;fill-rule:evenodd;stroke:none" />
+    <path id="path3340" d="m 294.28572,840.93363 119.99999,0 -22.85714,-168.57143 2.85714,-108.57142 91.42858,-80 151.42857,-78.57144 -5.71429,-12.85714 -122.85714,48.57143 40,-154.28571 -12.85715,-2.85714 -44.28571,137.14285 -120,97.14286 -45.71428,-85.71429 58.57142,-88.57142 30,-100 -11.42857,1.42856 L 380,309.50506 288.57143,435.21935 240,386.64792 l -2.85714,-102.85714 -14.28572,0 -5.71428,120 -85.71429,-25.71429 -2.85714,12.85715 80,32.85714 65.71428,58.57142 34.28572,58.57143 -1.42858,152.85714 z" style="fill:#dbe3e2;fill-rule:evenodd;stroke:none" />
+    <path id="path3344" d="m 605.03353,539.7578 74.79659,31.39105 -10.5438,39.6101 68.53729,73.68286 -108.61178,-61.76037 12.04532,-30.1668 z" style="fill:#ffeeaa;fill-rule:evenodd;stroke:none" />
+    <path style="fill:#ffeeaa;fill-rule:evenodd;stroke:none" d="m 470.82158,567.14296 88.33974,69.32457 -12.46169,47.83116 79.4686,106.65679 L 488.4797,685.66438 510.70238,646.462 z" id="path3346" />
+    <path id="path3348" d="m 270.42792,569.1008 -99.41899,84.78435 25.57204,46.38385 -56.28454,126.25897 128.96522,-130.56236 -29.04105,-37.854 z" style="fill:#ffeeaa;fill-rule:evenodd;stroke:none" />
+    <path style="fill:#ffeeaa;fill-rule:evenodd;stroke:none" d="m 132.32004,521.39112 -57.067583,40.80272 -1.702341,46.54703 -86.575373,54.0682 124.151137,-34.4792 -2.08688,-46.0898 z" id="path3350" />
+    <g id="g3042">
+      <path id="path3005" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#536c67;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m -71.943444,322.62257 c 5.405576,2.00565 10.230582,4.29578 14.475027,6.87042 4.244445,2.57479 7.631528,5.50637 10.161265,8.79474 2.546015,3.24457 4.136144,6.90936 4.770404,10.99441 0.606568,4.0249 -0.0032,8.49839 -1.829412,13.42048 -1.891449,5.09798 -4.513287,9.19994 -7.86554,12.30592 -3.352271,3.10605 -7.600809,4.85457 -12.745631,5.2456 l -0.122245,0.32963 c 0.104164,-0.0113 0.507874,0.1135 1.211035,0.37433 0.719475,0.21697 1.606594,0.52105 2.661329,0.91239 1.071042,0.34744 2.265779,0.76569 3.584216,1.25482 1.290775,0.42896 2.573418,0.87981 3.847905,1.35265 l 27.884812,10.34577 -4.40245,11.86587 -84.775111,-31.45308 c -1.7139,-0.63588 -3.37008,-1.22536 -4.96857,-1.76844 -1.58206,-0.58696 -3.01851,-1.09491 -4.30936,-1.52385 -1.33467,-0.44519 -2.47164,-0.81701 -3.41091,-1.11552 -0.93913,-0.29847 -1.61465,-0.49909 -2.02657,-0.60186 l 4.2557,-11.47035 c 0.14822,0.005 0.62596,0.1323 1.4333,0.38164 0.82374,0.20561 1.81505,0.49842 2.97392,0.87842 1.13137,0.31973 2.34242,0.69407 3.63313,1.12297 1.30716,0.38501 2.53203,0.78946 3.67461,1.21335 l 0.0979,-0.26367 c -1.87759,-1.94652 -3.34659,-3.91648 -4.40698,-5.90984 -1.10424,-2.00957 -1.82753,-4.10283 -2.16986,-6.27976 -0.38617,-2.19313 -0.39138,-4.46994 -0.0156,-6.83044 0.3482,-2.42062 1.0359,-5.01532 2.06312,-7.78408 1.82625,-4.92206 4.23791,-8.72703 7.23498,-11.41492 3.01346,-2.73168 6.49928,-4.5132 10.45747,-5.34459 3.930629,-0.89147 8.322274,-0.937 13.174963,-0.13658 4.8088,0.78428 9.959911,2.19547 15.453346,4.23358 m -4.35889,12.557 c -4.394752,-1.63046 -8.403928,-2.81796 -12.027528,-3.56247 -3.623554,-0.74438 -6.866513,-0.89763 -9.728887,-0.45976 -2.845994,0.39406 -5.283754,1.4395 -7.313294,3.13631 -2.02946,1.69696 -3.6475,4.17146 -4.85415,7.42352 -0.97827,2.63692 -1.52598,5.25857 -1.6431,7.86492 -0.11702,2.60648 0.55308,5.17997 2.01031,7.72049 1.47362,2.49666 3.89067,4.94335 7.25116,7.34005 3.316624,2.38049 7.941376,4.67132 13.874279,6.87252 5.054007,1.87515 9.493807,3.04743 13.319414,3.51678 3.781686,0.45316 7.042728,0.28814 9.78315,-0.49505 2.756738,-0.82706 5.058775,-2.24784 6.906121,-4.26233 1.803381,-2.03073 3.275764,-4.58427 4.417149,-7.66066 1.222898,-3.29602 1.596588,-6.25721 1.12108,-8.88355 -0.459219,-2.67019 -1.660962,-5.09094 -3.605225,-7.26228 -1.927959,-2.21517 -4.530042,-4.23053 -7.806243,-6.04609 -3.320149,-1.83173 -7.22155,-3.5792 -11.704229,-5.24243" />
+      <path id="path3007" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#536c67;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m -76.401101,278.49795 c -1.489137,-2.53106 -2.576297,-4.958 -3.261465,-7.28079 -0.72529,-2.34676 -1.084831,-4.66572 -1.078622,-6.95691 0.0063,-2.29106 0.390399,-4.57443 1.152279,-6.85013 0.721751,-2.29964 1.829282,-4.69612 3.322551,-7.18944 2.504944,-4.18215 5.115224,-7.26312 7.830822,-9.24292 2.739763,-2.01983 5.592696,-3.17967 8.558828,-3.47951 2.950051,-0.36396 6.001147,0.0155 9.153286,1.13843 3.176264,1.08288 6.453359,2.63588 9.831297,4.65898 L 2.5990468,269.34432 -3.9402148,280.26236 -45.32016,255.4782 c -2.774732,-1.66184 -5.316049,-2.93806 -7.623948,-3.82867 -2.28378,-0.93066 -4.398339,-1.32293 -6.343691,-1.17679 -1.985508,0.12221 -3.849977,0.86325 -5.593409,2.22311 -1.783586,1.33594 -3.518389,3.41136 -5.204426,6.22624 -1.541441,2.57376 -2.475956,5.18313 -2.803528,7.82815 -0.303413,2.60493 -0.05624,5.15712 0.741529,7.65657 0.821928,2.45934 2.198432,4.8137 4.129506,7.06306 1.931139,2.24947 4.404714,4.27738 7.420714,6.08377 l 38.484557,23.05 -6.50313,10.85771 -89.515804,-53.61473 6.50313,-10.85771 23.283755,13.94561 c 1.327113,0.79489 2.642119,1.60981 3.945036,2.4448 1.303022,0.8351 2.493405,1.63003 3.571178,2.3848 1.101937,0.71467 2.04298,1.33294 2.823127,1.85481 0.740015,0.4979 1.238717,0.85122 1.496081,1.05999 l 0.108334,-0.18098" />
+      <path id="path3009" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#536c67;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 35.703256,229.25802 c 2.29936,4.35757 4.214151,8.44306 5.744384,12.25646 1.596306,3.80881 2.614303,7.42559 3.054002,10.85035 0.47502,3.45552 0.303287,6.6906 -0.515188,9.70524 -0.783181,3.04538 -2.373759,5.94807 -4.771774,8.70806 -1.045344,1.20305 -2.049175,2.28692 -3.011499,3.25159 -0.962376,0.96463 -2.059308,1.90551 -3.290791,2.82261 l -7.165327,-6.22572 c 0.690267,-0.58008 1.422043,-1.27936 2.195314,-2.09783 0.80861,-0.78774 1.474247,-1.48237 1.996931,-2.0839 2.428776,-2.79537 3.644642,-6.30307 3.647601,-10.52312 0.0029,-4.22005 -1.493923,-9.21538 -4.490523,-14.98601 l -1.498313,-2.88531 -76.947391,-26.89762 8.854367,-10.19069 42.2543176,15.47621 c 1.2628304,0.47629 2.9209646,1.14078 4.9744271,1.99347 2.0841995,0.81738 4.1530323,1.65243 6.2064953,2.50511 2.084199,0.81738 3.94768,1.56715 5.59046,2.24929 1.642759,0.68223 2.65411,1.12628 3.03408,1.33217 -0.297015,-0.4443 -0.842565,-1.35299 -1.636668,-2.72608 -0.798764,-1.43913 -1.690608,-3.02129 -2.675553,-4.74649 -0.954217,-1.76049 -1.926122,-3.5364 -2.915702,-5.32773 -0.989599,-1.79123 -1.861438,-3.32496 -2.615524,-4.60118 l -23.024597,-39.75221 8.7621267,-10.08454 38.2443443,71.97787" />
+      <path id="path3011" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#536c67;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 63.164075,201.2472 -70.0351202,-77.34792 9.3818298,-8.49482 70.0351104,77.34791 -9.38182,8.49483" />
+      <path id="path3013" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#536c67;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 117.87847,111.43353 c 7.59923,10.93047 10.85308,20.7429 9.76157,29.43734 -1.09161,8.69452 -6.21737,16.22596 -15.37732,22.59434 -4.3491,3.02367 -8.6912,5.07193 -13.026318,6.14481 -4.335165,1.0729 -8.632371,1.09179 -12.891629,0.0567 -4.220782,-1.06188 -8.371016,-3.17188 -12.450684,-6.33005 -4.067937,-3.22338 -8.015099,-7.58692 -11.841512,-13.09064 -14.984437,-21.55286 -13.143498,-38.81811 5.522836,-51.79581 4.849417,-3.371416 9.493551,-5.601126 13.932432,-6.689132 4.47736,-1.114588 8.768701,-1.100853 12.874032,0.04121 4.14388,1.115146 8.159303,3.319152 12.046563,6.611008 3.88721,3.292024 7.70388,7.632114 11.45003,13.020264 m -10.91116,7.58589 c -3.37153,-4.84934 -6.53922,-8.58443 -9.503111,-11.20532 -2.925423,-2.64748 -5.774963,-4.40579 -8.548604,-5.27495 -2.735181,-0.89575 -5.396133,-0.98684 -7.982839,-0.27324 -2.613483,0.67526 -5.228787,1.92262 -7.845924,3.74208 -2.655626,1.84639 -4.780119,3.92288 -6.3735,6.22948 -1.581631,2.24151 -2.45401,4.84618 -2.617133,7.81404 -0.189853,2.92951 0.408182,6.25317 1.79409,9.97099 1.424416,3.69117 3.782233,7.90371 7.073462,12.6376 3.371502,4.84944 6.591072,8.57702 9.658703,11.18277 3.040872,2.56732 5.948141,4.28549 8.721813,5.15454 2.812143,0.84231 5.486453,0.95267 8.022971,0.33097 2.574972,-0.6484 5.055562,-1.8021 7.441802,-3.46113 2.6556,-1.84626 4.80686,-3.88426 6.45378,-6.114 1.6201,-2.26816 2.52509,-4.86698 2.715,-7.79646 0.18982,-2.9294 -0.42158,-6.2723 -1.83423,-10.02872 -1.41271,-3.75631 -3.8048,-8.05919 -7.17628,-12.90865" />
+    </g>
+    <g style="fill:#aa8800;fill-opacity:1" id="g3035">
+      <path id="path3015" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa8800;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 132.21718,47.982588 14.87573,33.707196 50.56078,-22.313596 4.48543,10.163622 -50.56078,22.313586 16.21,36.730544 -12.2864,5.42227 -39.99981,-90.636324 64.39103,-28.417182 4.42864,10.034962 -52.10462,22.994922" />
+      <path id="path3017" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa8800;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="M 235.30236,102.33769 206.64606,2.0060673 218.81567,-1.4697645 247.47197,98.861855 235.30236,102.33769" />
+      <path id="path3019" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa8800;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 285.54373,91.72749 c -7.55596,1.134399 -13.53376,-0.0064 -17.9334,-3.422261 -4.39968,-3.41588 -7.12146,-8.600493 -8.16538,-15.553827 -0.74466,-4.960018 -0.4265,-9.155303 0.95447,-12.585882 1.42038,-3.483835 3.50141,-6.355878 6.2431,-8.616148 2.78803,-2.267136 6.07679,-4.04069 9.86627,-5.320673 3.78945,-1.279876 7.69368,-2.268924 11.71272,-2.967155 l 16.85482,-2.814852 -0.61592,-4.102465 c -0.46633,-3.105758 -1.1875,-5.699301 -2.16353,-7.780641 -0.97611,-2.081209 -2.23721,-3.693085 -3.7833,-4.835639 -1.54617,-1.142411 -3.3843,-1.861859 -5.51437,-2.158342 -2.09076,-0.349639 -4.5036,-0.319204 -7.23853,0.09133 -2.41053,0.361971 -4.56139,0.874482 -6.45262,1.537554 -1.89824,0.616853 -3.49626,1.496667 -4.79406,2.639451 -1.30481,1.09657 -2.27928,2.498977 -2.9234,4.207224 -0.6511,1.662026 -0.9382,3.695959 -0.86144,6.101766 l -13.24971,0.780507 c 0.0181,-3.036293 0.49177,-5.880307 1.42088,-8.532081 0.92214,-2.697995 2.42957,-5.128417 4.52228,-7.291288 2.13906,-2.16968 4.9202,-4.00923 8.34344,-5.518646 3.4626,-1.562578 7.74346,-2.726673 12.84259,-3.492292 9.45648,-1.419644 16.89913,-0.309214 22.32798,3.331297 5.42179,3.594314 8.74862,9.493886 9.9805,17.698736 l 4.86466,32.402489 c 0.55669,3.708467 1.46446,6.439899 2.72334,8.194303 1.25177,1.708088 3.24518,2.356823 5.98022,1.946193 0.69525,-0.104366 1.38363,-0.255118 2.06512,-0.452238 0.68134,-0.19708 1.33609,-0.413887 1.96427,-0.650401 l 1.16919,7.787723 c -1.52049,0.607472 -3.05482,1.122228 -4.603,1.544258 -1.50196,0.415101 -3.13367,0.754868 -4.8951,1.019322 -2.36419,0.354938 -4.44908,0.359842 -6.25463,0.01471 -1.76629,-0.398409 -3.27645,-1.143405 -4.53047,-2.234945 -1.26109,-1.137879 -2.30895,-2.59217 -3.14353,-4.36289 -0.84166,-1.817046 -1.5199,-3.966735 -2.03472,-6.449074 l -0.41719,0.06264 c -0.98247,2.612323 -2.13875,5.013733 -3.46885,7.204225 -1.28384,2.183567 -2.88752,4.13074 -4.81104,5.84153 -1.93057,1.66445 -4.20764,3.072819 -6.83123,4.225113 -2.5773,1.145332 -5.62744,1.982465 -9.15043,2.511372 m 1.44158,-9.814984 c 3.98654,-0.598508 7.35532,-1.838969 10.10637,-3.721409 2.79036,-1.935721 4.98852,-4.185452 6.59449,-6.749185 1.65221,-2.57065 2.76326,-5.273367 3.33313,-8.108161 0.56976,-2.834737 0.67025,-5.480538 0.30145,-7.937412 l -0.92908,-6.18846 -13.6563,2.334652 c -3.05254,0.505719 -5.93813,1.175938 -8.65679,2.01066 -2.67932,0.781494 -4.97498,1.908252 -6.88697,3.380274 -1.91203,1.472103 -3.33724,3.345077 -4.27565,5.618951 -0.89209,2.266971 -1.08409,5.092412 -0.57604,8.476335 0.61242,4.079309 2.17501,7.067925 4.68779,8.965877 2.55909,1.891028 5.87829,2.530316 9.9576,1.917878" />
+      <path id="path3021" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa8800;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 403.36846,63.872409 c -0.0954,3.561249 -0.88353,6.728787 -2.36445,9.502647 -1.43294,2.728282 -3.48711,5.017888 -6.16252,6.868842 -2.67428,1.804103 -5.94638,3.170181 -9.81628,4.098227 -3.8219,0.882444 -8.19288,1.257835 -13.11295,1.126163 -4.4047,-0.117882 -8.37824,-0.575919 -11.92064,-1.374095 -3.49682,-0.750074 -6.56062,-1.910573 -9.19139,-3.481524 -2.6308,-1.570936 -4.82733,-3.59917 -6.58957,-6.084715 -1.71416,-2.531123 -2.9453,-5.588594 -3.69343,-9.172408 l 11.23399,-1.879814 c 0.96862,4.105522 3.11413,7.16401 6.43652,9.175484 3.3236,1.964621 7.98434,3.027191 13.98222,3.1877 2.71775,0.07274 5.20624,-0.04822 7.46551,-0.362902 2.30604,-0.313404 4.29101,-0.893322 5.95492,-1.739745 1.66507,-0.893267 2.96285,-2.077714 3.89333,-3.553364 0.9785,-1.52123 1.49787,-3.406446 1.55812,-5.655656 0.0614,-2.296029 -0.42731,-4.184778 -1.46613,-5.666254 -1.03766,-1.528279 -2.50388,-2.810149 -4.39868,-3.845612 -1.8949,-1.035407 -4.21524,-1.941558 -6.96102,-2.718449 -2.69775,-0.822438 -5.67473,-1.722717 -8.93094,-2.700834 -3.02451,-0.878023 -6.02302,-1.849258 -8.99559,-2.913579 -2.97261,-1.06425 -5.65589,-2.425578 -8.04987,-4.08401 -2.34589,-1.703954 -4.23658,-3.770896 -5.67207,-6.200836 -1.43553,-2.429856 -2.10499,-5.448843 -2.00842,-9.056977 0.18559,-6.934952 2.78672,-12.14066 7.80341,-15.617131 5.06476,-3.5219605 12.32983,-5.1562816 21.79521,-4.9030213 8.38758,0.2245303 15.00195,1.8786071 19.84309,4.9623323 4.88793,3.084989 7.90076,7.901707 9.03854,14.450075 l -11.42417,1.10101 c -0.36911,-1.979272 -1.09837,-3.640003 -2.1878,-4.982183 -1.08829,-1.388926 -2.41833,-2.503038 -3.99014,-3.342321 -1.57065,-0.886024 -3.35902,-1.520029 -5.3651,-1.902031 -1.95805,-0.427509 -4.0148,-0.670079 -6.17024,-0.727829 -5.71673,-0.152926 -9.95717,0.60108 -12.72132,2.262038 -2.7642,1.661078 -4.19331,4.248768 -4.28734,7.763077 -0.0552,2.061815 0.39104,3.785304 1.33872,5.17048 0.99574,1.339671 2.37139,2.501886 4.12694,3.486658 1.80362,0.939254 3.9612,1.794162 6.47277,2.564704 2.51275,0.72379 5.28201,1.501244 8.30776,2.332465 2.00108,0.569372 4.04779,1.186834 6.14014,1.85243 2.09353,0.618736 4.11304,1.376203 6.05857,2.272278 1.99353,0.850553 3.84215,1.861306 5.54586,3.032269 1.7517,1.125419 3.26291,2.478833 4.53362,4.06024 1.27059,1.581458 2.25318,3.413096 2.9478,5.494885 0.74135,2.08311 1.07569,4.483533 1.00302,7.201286" />
+      <path id="path3023" style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa8800;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans" d="m 442.68429,27.382875 c 1.89325,-2.244902 3.82167,-4.075947 5.78533,-5.493325 1.97294,-1.463143 4.04108,-2.572123 6.20442,-3.326836 2.16323,-0.754536 4.44462,-1.150144 6.84418,-1.186825 2.40884,-0.08255 5.03708,0.166631 7.8847,0.747634 4.77654,0.974625 8.54933,2.413994 11.31826,4.318595 2.81473,1.913993 4.85584,4.220119 6.12326,6.918569 1.32257,2.661992 1.97741,5.66604 1.96452,9.012143 0.0328,3.355684 -0.34427,6.962439 -1.13137,10.820411 l -10.13499,49.671894 -12.46964,-2.544289 9.643,-47.260632 c 0.64655,-3.169039 1.00682,-5.989895 1.08084,-8.46257 0.11981,-2.463223 -0.21208,-4.58809 -0.99569,-6.374602 -0.77436,-1.832388 -2.09228,-3.345165 -3.95377,-4.538333 -1.85226,-1.238946 -4.38582,-2.186543 -7.6008,-2.842506 -2.93947,-0.599747 -5.71111,-0.615062 -8.31487,-0.04615 -2.55796,0.578518 -4.88339,1.658897 -6.97631,3.241134 -2.04705,1.591647 -3.81098,3.67162 -5.2918,6.239869 -1.48088,2.568337 -2.57272,5.574815 -3.27553,9.019424 l -8.96827,43.953769 -12.40075,-2.530236 20.86035,-102.237261 12.40077,2.530169 -5.42594,26.592738 c -0.30927,1.51574 -0.64152,3.026712 -0.99666,4.532938 -0.3552,1.506315 -0.70996,2.893094 -1.06416,4.160268 -0.30839,1.276669 -0.57917,2.369582 -0.81257,3.278782 -0.22426,0.863189 -0.39175,1.450944 -0.5032,1.763068 l 0.20661,0.04244" />
+    </g>
+  </g>
+</svg>phyloFlash v3.4.2</a> by <a href="mailto:hgruber@mpi-bremen.de">Harald Gruber-Vodicka</a>, Elmar Pruesse, Brandon Seah</h3>
+<h3>High throughput phylogenetic screening using SSU rRNA gene(s) abundance(s)</h3>
+<p>Click on report section headers to expand, mouse-over underlined text to see explanations.</p>
+
+<h1>Library name: pf_DT26_OFRA_3H_August_2022</h1>
+
+<h2>Graphical Summary</h2>
+<p>Mouseover on panels to expand details.</p>
+<div class="fullwidth">
+  <div class="col20pc">
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+<text style="fill:black;font-size:14px;text-anchor:middle;font-weight:bold;" x="120" y="18" >Mapping identity (%)</text>
+<rect x="40" y="219.97901119403" width="10.2272727272727" height="0.0209888059701484" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="50.2272727272727" y="220" width="12.2727272727273" height="0" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="62.5" y="220" width="12.2727272727273" height="0" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="74.7727272727273" y="220" width="12.2727272727273" height="0" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="87.0454545454545" y="220" width="12.2727272727273" height="0" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="99.3181818181818" y="220" width="12.2727272727273" height="0" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="111.590909090909" y="219.97901119403" width="12.2727272727273" height="0.0209888059701484" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="123.863636363636" y="219.454291044776" width="10.2272727272727" height="0.545708955223887" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="134.090909090909" y="215.319496268657" width="12.2727272727273" height="4.68050373134329" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="146.363636363636" y="215.865205223881" width="12.2727272727273" height="4.13479477611941" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="158.636363636364" y="214.626865671642" width="12.2727272727273" height="5.37313432835822" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="170.909090909091" y="213.703358208955" width="12.2727272727273" height="6.29664179104478" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="183.181818181818" y="214.836753731343" width="12.2727272727273" height="5.16324626865671" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="195.454545454545" y="209.925373134328" width="12.2727272727273" height="10.0746268656716" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="207.727272727273" y="40" width="12.2727272727273" height="180" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<line x1="40" x2="220" y1="220" y2="220" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="40" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="56.3636363636364" x2="56.3636363636364" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="56.3636363636364" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">20</text>
+<line x1="76.8181818181818" x2="76.8181818181818" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="76.8181818181818" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">30</text>
+<line x1="97.2727272727273" x2="97.2727272727273" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="97.2727272727273" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">40</text>
+<line x1="117.727272727273" x2="117.727272727273" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="117.727272727273" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">50</text>
+<line x1="138.181818181818" x2="138.181818181818" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="138.181818181818" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">60</text>
+<line x1="158.636363636364" x2="158.636363636364" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="158.636363636364" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">70</text>
+<line x1="179.090909090909" x2="179.090909090909" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="179.090909090909" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">80</text>
+<line x1="199.545454545455" x2="199.545454545455" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="199.545454545455" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">90</text>
+<line x1="220" x2="220" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="220" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="40" x2="40" y1="220" y2="40" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="220" y2="220" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="199.011194029851" y2="199.011194029851" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="199.011194029851" text-anchor="end" fill="black" style="fill:black;font-size:8px;">1000</text>
+<line x1="40" x2="37.5" y1="178.022388059701" y2="178.022388059701" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="178.022388059701" text-anchor="end" fill="black" style="fill:black;font-size:8px;">2000</text>
+<line x1="40" x2="37.5" y1="157.033582089552" y2="157.033582089552" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="157.033582089552" text-anchor="end" fill="black" style="fill:black;font-size:8px;">3000</text>
+<line x1="40" x2="37.5" y1="136.044776119403" y2="136.044776119403" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="136.044776119403" text-anchor="end" fill="black" style="fill:black;font-size:8px;">4000</text>
+<line x1="40" x2="37.5" y1="115.055970149254" y2="115.055970149254" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="115.055970149254" text-anchor="end" fill="black" style="fill:black;font-size:8px;">5000</text>
+<line x1="40" x2="37.5" y1="94.0671641791045" y2="94.0671641791045" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="94.0671641791045" text-anchor="end" fill="black" style="fill:black;font-size:8px;">6000</text>
+<line x1="40" x2="37.5" y1="73.0783582089552" y2="73.0783582089552" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="73.0783582089552" text-anchor="end" fill="black" style="fill:black;font-size:8px;">7000</text>
+<line x1="40" x2="37.5" y1="52.089552238806" y2="52.089552238806" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="52.089552238806" text-anchor="end" fill="black" style="fill:black;font-size:8px;">8000</text>
+<line x1="40" x2="37.5" y1="40" y2="40" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="40" text-anchor="end" fill="black" style="fill:black;font-size:8px;">8576</text>
+</svg>
+<span class="tooltiptext">Read-mapping %identity of reads vs. reference database. Lower %identity hits may indicate presence of divergent taxa not represented in the database.</span></div>
+<!--SUPPRESS_IF_SE_READS-->
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+<text style="fill:black;font-size:14px;text-anchor:middle;font-weight:bold;" x="120" y="18" >Insert size (bp)</text>
+<rect x="40" y="179.856115107914" width="13.7554585152838" height="40.1438848920863" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="53.7554585152838" y="200.737410071942" width="13.9519650655022" height="19.2625899280576" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="67.707423580786" y="214.658273381295" width="13.7554585152838" height="5.34172661870502" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="81.4628820960699" y="216.60071942446" width="13.9519650655022" height="3.39928057553956" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="95.4148471615721" y="218.381294964029" width="13.7554585152838" height="1.61870503597123" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="109.170305676856" y="219.028776978417" width="13.9519650655022" height="0.971223021582745" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="123.122270742358" y="59.7482014388489" width="13.7554585152839" height="160.251798561151" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="136.877729257642" y="39.1906474820144" width="13.9519650655022" height="180.809352517986" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="150.829694323144" y="130.809352517986" width="13.7554585152838" height="89.1906474820144" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="164.585152838428" y="186.169064748201" width="13.9519650655022" height="33.8309352517986" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="178.53711790393" y="208.345323741007" width="13.7554585152838" height="11.6546762589928" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="192.292576419214" y="216.924460431655" width="13.9519650655022" height="3.07553956834533" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<rect x="206.244541484716" y="219.190647482014" width="13.7554585152839" height="0.809352517985616" style="fill:rgb(155,155,155);fill-opacity:0.5;stroke:none" />
+<line x1="40" x2="220" y1="220" y2="220" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="40" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="50.0218340611354" x2="50.0218340611354" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="50.0218340611354" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="69.6724890829694" x2="69.6724890829694" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="69.6724890829694" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">200</text>
+<line x1="89.3231441048035" x2="89.3231441048035" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="89.3231441048035" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">300</text>
+<line x1="108.973799126638" x2="108.973799126638" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="108.973799126638" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">400</text>
+<line x1="128.624454148472" x2="128.624454148472" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="128.624454148472" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">500</text>
+<line x1="148.275109170306" x2="148.275109170306" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="148.275109170306" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">600</text>
+<line x1="167.92576419214" x2="167.92576419214" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="167.92576419214" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">700</text>
+<line x1="187.576419213974" x2="187.576419213974" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="187.576419213974" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">800</text>
+<line x1="207.227074235808" x2="207.227074235808" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="207.227074235808" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">900</text>
+<line x1="220" x2="220" y1="220" y2="222.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="220" y="231.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">965</text>
+<line x1="40" x2="40" y1="219.190647482014" y2="39.1906474820144" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="219.190647482014" y2="219.190647482014" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="203.812949640288" y2="203.812949640288" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="203.812949640288" text-anchor="end" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="40" x2="37.5" y1="187.625899280576" y2="187.625899280576" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="187.625899280576" text-anchor="end" fill="black" style="fill:black;font-size:8px;">200</text>
+<line x1="40" x2="37.5" y1="171.438848920863" y2="171.438848920863" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="171.438848920863" text-anchor="end" fill="black" style="fill:black;font-size:8px;">300</text>
+<line x1="40" x2="37.5" y1="155.251798561151" y2="155.251798561151" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="155.251798561151" text-anchor="end" fill="black" style="fill:black;font-size:8px;">400</text>
+<line x1="40" x2="37.5" y1="139.064748201439" y2="139.064748201439" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="139.064748201439" text-anchor="end" fill="black" style="fill:black;font-size:8px;">500</text>
+<line x1="40" x2="37.5" y1="122.877697841727" y2="122.877697841727" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="122.877697841727" text-anchor="end" fill="black" style="fill:black;font-size:8px;">600</text>
+<line x1="40" x2="37.5" y1="106.690647482014" y2="106.690647482014" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="106.690647482014" text-anchor="end" fill="black" style="fill:black;font-size:8px;">700</text>
+<line x1="40" x2="37.5" y1="90.5035971223022" y2="90.5035971223022" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="90.5035971223022" text-anchor="end" fill="black" style="fill:black;font-size:8px;">800</text>
+<line x1="40" x2="37.5" y1="74.3165467625899" y2="74.3165467625899" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="74.3165467625899" text-anchor="end" fill="black" style="fill:black;font-size:8px;">900</text>
+<line x1="40" x2="37.5" y1="58.1294964028777" y2="58.1294964028777" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="58.1294964028777" text-anchor="end" fill="black" style="fill:black;font-size:8px;">1000</text>
+<line x1="40" x2="37.5" y1="39.1906474820144" y2="39.1906474820144" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="39.1906474820144" text-anchor="end" fill="black" style="fill:black;font-size:8px;">1117</text>
+</svg>
+<span class="tooltiptext">Insert sizes for read pairs. Distribution should generally be unimodal; more than one peak may indicate contamination from other libraries.</span></div>
+<!--SUPPRESS_IF_SE_READS_END-->
+  </div>
+  <div class="col20pc">
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" height="100%" >
+<text style="fill:black;font-size:14;text-anchor:middle;font-weight:bold;" x="120" y="18" >0.038 % pairs mapped</text>
+<circle class="donut-segment" cx="120" cy="120" r="60" fill="transparent" stroke-width="45" stroke="rgb(47,234,24)" stroke-dasharray="248.815601070833 128.175516929167" stroke-dashoffset="248.815601070833" ></circle>
+<circle class="donut-segment" cx="120" cy="120" r="60" fill="transparent" stroke-width="45" stroke="rgb(162,104,242)" stroke-dasharray="76.8906782491752 300.100439750825" stroke-dashoffset="325.706279320008" ></circle>
+<circle class="donut-segment" cx="120" cy="120" r="60" fill="transparent" stroke-width="45" stroke="rgb(249,1,141)" stroke-dasharray="51.2848386799922 325.706279320008" stroke-dashoffset="376.991118" ></circle>
+<text x="91.0941384540947" y="67.4219516500569" style="fill:black;font-size:14px;text-anchor:middle;" >Mapped pair</text>
+<text x="124.513334461657" y="179.830007621905" style="fill:black;font-size:14px;text-anchor:middle;" >Mapped single</text>
+<text x="174.60344757635" y="144.868926651079" style="fill:black;font-size:14px;text-anchor:middle;" >Mapped bad pair</text>
+</svg>
+<span class="tooltiptext">Proportion of reads mapped to SSU rRNA database. Typically < 1% for metagenomes, ca. 20% for metatranscriptomes without rRNA depletion or poly-A selection.</span></div>
+<!--SUPPRESS_IF_NO_TREE-->
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" height="100%" >
+<text style="fill:black;font-size:14;text-anchor:middle;font-weight:bold;" x="120" y="18" >Reads assembled</text>
+<circle class="donut-segment" cx="120" cy="120" r="60" fill="transparent" stroke-width="45" stroke="rgb(10,236,193)" stroke-dasharray="280.201044428488 96.7900735715118" stroke-dashoffset="280.201044428488" ></circle>
+<circle class="donut-segment" cx="120" cy="120" r="60" fill="transparent" stroke-width="45" stroke="rgb(122,24,143)" stroke-dasharray="96.7900735715118 280.201044428488" stroke-dashoffset="376.991118" ></circle>
+<text x="78.4818835054584" y="76.6843445998369" style="fill:black;font-size:14px;text-anchor:middle;" >Assembled</text>
+<text x="161.518116494542" y="163.315655400163" style="fill:black;font-size:14px;text-anchor:middle;" >Unassembled</text>
+</svg>
+<span class="tooltiptext">Proportion of reads assembled to full-length sequences. High proportion unassembled suggest either assembly failure or high diversity of organisms with low coverage.</span></div>
+<!--SUPPRESS_IF_NO_TREE_END-->
+  </div>
+  <div class="col50pc">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 300" width="100%" height="100%">
+<text style="fill:black;text-anchor:middle;font-weight:bold;font-size:10px;" x="175" y="14" >Taxonomic summary from reads mapped</text>
+<rect id="rect0" x="5" y="5" width="35" height="264.23157555233" style="fill-opacity:0.5;stroke-width:1;fill:rgb(17,33,123);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="142.115787776165" style="fill:black;fill-opacity:0.6;font-size:8px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect0.mouseover" end="rect0.mouseout" />Eukaryota;Amorphea;Obazoa;Opisthokonta</text>
+<text x="22.5" y="142.115787776165" style="fill:black;fill-opacity:0.6;font-size:8px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect0.mouseover" end="rect0.mouseout" />5650</text>
+<rect id="rect1" x="5" y="269.23157555233" width="35" height="5.70553136590871" style="fill-opacity:0.5;stroke-width:1;fill:rgb(178,174,80);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="277.084341235285" style="fill:black;fill-opacity:0.356595710369294;font-size:5.70553136590871px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect1.mouseover" end="rect1.mouseout" /><set attributeName="font-size" to="8" begin="rect1.mouseover" end="rect1.mouseout" />Eukaryota;(Eukaryota);(Eukaryota);(Eukaryota)</text>
+<text x="22.5" y="277.084341235285" style="fill:black;fill-opacity:0.356595710369294;font-size:5.70553136590871px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect1.mouseover" end="rect1.mouseout" /><set attributeName="font-size" to="8" begin="rect1.mouseover" end="rect1.mouseout" />122</text>
+<rect id="rect2" x="5" y="274.937106918239" width="35" height="5.14433155942589" style="fill-opacity:0.5;stroke-width:1;fill:rgb(113,1,184);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="282.509272697952" style="fill:black;fill-opacity:0.321520722464118;font-size:5.14433155942589px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect2.mouseover" end="rect2.mouseout" /><set attributeName="font-size" to="8" begin="rect2.mouseover" end="rect2.mouseout" />Eukaryota;SAR;Alveolata;Dinoflagellata</text>
+<text x="22.5" y="282.509272697952" style="fill:black;fill-opacity:0.321520722464118;font-size:5.14433155942589px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect2.mouseover" end="rect2.mouseout" /><set attributeName="font-size" to="8" begin="rect2.mouseover" end="rect2.mouseout" />110</text>
+<rect id="rect3" x="5" y="280.081438477665" width="35" height="5.00403160780519" style="fill-opacity:0.5;stroke-width:1;fill:rgb(26,163,17);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="287.583454281567" style="fill:black;fill-opacity:0.312751975487824;font-size:5.00403160780519px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect3.mouseover" end="rect3.mouseout" /><set attributeName="font-size" to="8" begin="rect3.mouseover" end="rect3.mouseout" />Eukaryota;SAR;Alveolata;Apicomplexa</text>
+<text x="22.5" y="287.583454281567" style="fill:black;fill-opacity:0.312751975487824;font-size:5.00403160780519px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect3.mouseover" end="rect3.mouseout" /><set attributeName="font-size" to="8" begin="rect3.mouseover" end="rect3.mouseout" />107</text>
+<rect id="rect4" x="5" y="285.08547008547" width="35" height="3.32043218835673" style="fill-opacity:0.5;stroke-width:1;fill:rgb(229,92,239);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="291.745686179648" style="fill:black;fill-opacity:0.207527011772296;font-size:3.32043218835673px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect4.mouseover" end="rect4.mouseout" /><set attributeName="font-size" to="8" begin="rect4.mouseover" end="rect4.mouseout" />Eukaryota;Amorphea;(Amorphea);(Amorphea)</text>
+<text x="22.5" y="291.745686179648" style="fill:black;fill-opacity:0.207527011772296;font-size:3.32043218835673px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect4.mouseover" end="rect4.mouseout" /><set attributeName="font-size" to="8" begin="rect4.mouseover" end="rect4.mouseout" />71</text>
+<rect id="rect5" x="5" y="288.405902273827" width="35" height="2.24479922593127" style="fill-opacity:0.5;stroke-width:1;fill:rgb(142,14,62);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="294.528301886792" style="fill:black;fill-opacity:0.140299951620705;font-size:2.24479922593127px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect5.mouseover" end="rect5.mouseout" /><set attributeName="font-size" to="8" begin="rect5.mouseover" end="rect5.mouseout" />Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast</text>
+<text x="22.5" y="294.528301886792" style="fill:black;fill-opacity:0.140299951620705;font-size:2.24479922593127px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect5.mouseover" end="rect5.mouseout" /><set attributeName="font-size" to="8" begin="rect5.mouseover" end="rect5.mouseout" />48</text>
+<rect id="rect6" x="5" y="290.650701499758" width="35" height="0.561199806482819" style="fill-opacity:0.5;stroke-width:1;fill:rgb(97,47,243);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="295.931301403" style="fill:black;fill-opacity:0.0350749879051762;font-size:0.561199806482819px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect6.mouseover" end="rect6.mouseout" /><set attributeName="font-size" to="8" begin="rect6.mouseover" end="rect6.mouseout" />Eukaryota;Archaeplastida;Chloroplastida;Charophyta</text>
+<text x="22.5" y="295.931301403" style="fill:black;fill-opacity:0.0350749879051762;font-size:0.561199806482819px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect6.mouseover" end="rect6.mouseout" /><set attributeName="font-size" to="8" begin="rect6.mouseover" end="rect6.mouseout" />12</text>
+<rect id="rect7" x="5" y="291.211901306241" width="35" height="0.561199806482819" style="fill-opacity:0.5;stroke-width:1;fill:rgb(26,173,114);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="296.492501209482" style="fill:black;fill-opacity:0.0350749879051762;font-size:0.561199806482819px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect7.mouseover" end="rect7.mouseout" /><set attributeName="font-size" to="8" begin="rect7.mouseover" end="rect7.mouseout" />Eukaryota;Amorphea;Amoebozoa;Incertae Sedis</text>
+<text x="22.5" y="296.492501209482" style="fill:black;fill-opacity:0.0350749879051762;font-size:0.561199806482819px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect7.mouseover" end="rect7.mouseout" /><set attributeName="font-size" to="8" begin="rect7.mouseover" end="rect7.mouseout" />12</text>
+<rect id="rect8" x="5" y="291.773101112724" width="35" height="0.420899854862171" style="fill-opacity:0.5;stroke-width:1;fill:rgb(156,68,239);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="296.983551040155" style="fill:black;fill-opacity:0.0263062409288857;font-size:0.420899854862171px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect8.mouseover" end="rect8.mouseout" /><set attributeName="font-size" to="8" begin="rect8.mouseover" end="rect8.mouseout" />Eukaryota;Amorphea;Amoebozoa;Discosea</text>
+<text x="22.5" y="296.983551040155" style="fill:black;fill-opacity:0.0263062409288857;font-size:0.420899854862171px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect8.mouseover" end="rect8.mouseout" /><set attributeName="font-size" to="8" begin="rect8.mouseover" end="rect8.mouseout" />9</text>
+<rect id="rect9" x="5" y="292.194000967586" width="35" height="0.280599903241352" style="fill-opacity:0.5;stroke-width:1;fill:rgb(92,142,24);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="297.334300919207" style="fill:black;fill-opacity:0.0175374939525845;font-size:0.280599903241352px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect9.mouseover" end="rect9.mouseout" /><set attributeName="font-size" to="8" begin="rect9.mouseover" end="rect9.mouseout" />Bacteria;Cloacimonadota;Cloacimonadia;MSBL2</text>
+<text x="22.5" y="297.334300919207" style="fill:black;fill-opacity:0.0175374939525845;font-size:0.280599903241352px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect9.mouseover" end="rect9.mouseout" /><set attributeName="font-size" to="8" begin="rect9.mouseover" end="rect9.mouseout" />6</text>
+<rect id="rect10" x="5" y="292.474600870827" width="35" height="0.233833252701174" style="fill-opacity:0.5;stroke-width:1;fill:rgb(119,119,74);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="297.591517497178" style="fill:black;fill-opacity:0.0146145782938234;font-size:0.233833252701174px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect10.mouseover" end="rect10.mouseout" /><set attributeName="font-size" to="8" begin="rect10.mouseover" end="rect10.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales</text>
+<text x="22.5" y="297.591517497178" style="fill:black;fill-opacity:0.0146145782938234;font-size:0.233833252701174px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect10.mouseover" end="rect10.mouseout" /><set attributeName="font-size" to="8" begin="rect10.mouseover" end="rect10.mouseout" />5</text>
+<rect id="rect11" x="5" y="292.708434123528" width="35" height="0.18706660216094" style="fill-opacity:0.5;stroke-width:1;fill:rgb(179,222,88);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="297.801967424609" style="fill:black;fill-opacity:0.0116916626350587;font-size:0.18706660216094px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect11.mouseover" end="rect11.mouseout" /><set attributeName="font-size" to="8" begin="rect11.mouseover" end="rect11.mouseout" />Bacteria;(Bacteria);(Bacteria);(Bacteria)</text>
+<text x="22.5" y="297.801967424609" style="fill:black;fill-opacity:0.0116916626350587;font-size:0.18706660216094px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect11.mouseover" end="rect11.mouseout" /><set attributeName="font-size" to="8" begin="rect11.mouseover" end="rect11.mouseout" />4</text>
+<rect id="rect12" x="5" y="292.895500725689" width="35" height="0.140299951620705" style="fill-opacity:0.5;stroke-width:1;fill:rgb(176,203,240);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="297.9656507015" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect12.mouseover" end="rect12.mouseout" /><set attributeName="font-size" to="8" begin="rect12.mouseover" end="rect12.mouseout" />Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales</text>
+<text x="22.5" y="297.9656507015" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect12.mouseover" end="rect12.mouseout" /><set attributeName="font-size" to="8" begin="rect12.mouseover" end="rect12.mouseout" />3</text>
+<rect id="rect13" x="5" y="293.03580067731" width="35" height="0.140299951620761" style="fill-opacity:0.5;stroke-width:1;fill:rgb(224,234,174);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.10595065312" style="fill:black;fill-opacity:0.00876874697629759;font-size:0.140299951620761px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect13.mouseover" end="rect13.mouseout" /><set attributeName="font-size" to="8" begin="rect13.mouseover" end="rect13.mouseout" />Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta</text>
+<text x="22.5" y="298.10595065312" style="fill:black;fill-opacity:0.00876874697629759;font-size:0.140299951620761px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect13.mouseover" end="rect13.mouseout" /><set attributeName="font-size" to="8" begin="rect13.mouseover" end="rect13.mouseout" />3</text>
+<rect id="rect14" x="5" y="293.176100628931" width="35" height="0.140299951620705" style="fill-opacity:0.5;stroke-width:1;fill:rgb(95,45,60);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.246250604741" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect14.mouseover" end="rect14.mouseout" /><set attributeName="font-size" to="8" begin="rect14.mouseover" end="rect14.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales</text>
+<text x="22.5" y="298.246250604741" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect14.mouseover" end="rect14.mouseout" /><set attributeName="font-size" to="8" begin="rect14.mouseover" end="rect14.mouseout" />3</text>
+<rect id="rect15" x="5" y="293.316400580552" width="35" height="0.140299951620705" style="fill-opacity:0.5;stroke-width:1;fill:rgb(122,15,22);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.386550556362" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect15.mouseover" end="rect15.mouseout" /><set attributeName="font-size" to="8" begin="rect15.mouseover" end="rect15.mouseout" />Bacteria;Bacteroidota;Bacteroidia;Cytophagales</text>
+<text x="22.5" y="298.386550556362" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect15.mouseover" end="rect15.mouseout" /><set attributeName="font-size" to="8" begin="rect15.mouseover" end="rect15.mouseout" />3</text>
+<rect id="rect16" x="5" y="293.456700532172" width="35" height="0.140299951620705" style="fill-opacity:0.5;stroke-width:1;fill:rgb(163,160,248);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.526850507983" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect16.mouseover" end="rect16.mouseout" /><set attributeName="font-size" to="8" begin="rect16.mouseover" end="rect16.mouseout" />Eukaryota;SAR;Alveolata;(Alveolata)</text>
+<text x="22.5" y="298.526850507983" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect16.mouseover" end="rect16.mouseout" /><set attributeName="font-size" to="8" begin="rect16.mouseover" end="rect16.mouseout" />3</text>
+<rect id="rect17" x="5" y="293.597000483793" width="35" height="0.140299951620705" style="fill-opacity:0.5;stroke-width:1;fill:rgb(234,136,170);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.667150459603" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect17.mouseover" end="rect17.mouseout" /><set attributeName="font-size" to="8" begin="rect17.mouseover" end="rect17.mouseout" />Eukaryota;SAR;(SAR);(SAR)</text>
+<text x="22.5" y="298.667150459603" style="fill:black;fill-opacity:0.00876874697629404;font-size:0.140299951620705px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect17.mouseover" end="rect17.mouseout" /><set attributeName="font-size" to="8" begin="rect17.mouseover" end="rect17.mouseout" />3</text>
+<rect id="rect18" x="5" y="293.737300435414" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(123,198,73);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.784067085954" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect18.mouseover" end="rect18.mouseout" /><set attributeName="font-size" to="8" begin="rect18.mouseover" end="rect18.mouseout" />Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales</text>
+<text x="22.5" y="298.784067085954" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect18.mouseover" end="rect18.mouseout" /><set attributeName="font-size" to="8" begin="rect18.mouseover" end="rect18.mouseout" />2</text>
+<rect id="rect19" x="5" y="293.830833736494" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(179,137,66);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.877600387034" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect19.mouseover" end="rect19.mouseout" /><set attributeName="font-size" to="8" begin="rect19.mouseover" end="rect19.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales</text>
+<text x="22.5" y="298.877600387034" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect19.mouseover" end="rect19.mouseout" /><set attributeName="font-size" to="8" begin="rect19.mouseover" end="rect19.mouseout" />2</text>
+<rect id="rect20" x="5" y="293.924367037575" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(12,213,55);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="298.971133688115" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect20.mouseover" end="rect20.mouseout" /><set attributeName="font-size" to="8" begin="rect20.mouseover" end="rect20.mouseout" />Eukaryota;SAR;Rhizaria;Retaria</text>
+<text x="22.5" y="298.971133688115" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect20.mouseover" end="rect20.mouseout" /><set attributeName="font-size" to="8" begin="rect20.mouseover" end="rect20.mouseout" />2</text>
+<rect id="rect21" x="5" y="294.017900338655" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(149,191,215);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.064666989195" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect21.mouseover" end="rect21.mouseout" /><set attributeName="font-size" to="8" begin="rect21.mouseover" end="rect21.mouseout" />Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales</text>
+<text x="22.5" y="299.064666989195" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect21.mouseover" end="rect21.mouseout" /><set attributeName="font-size" to="8" begin="rect21.mouseover" end="rect21.mouseout" />2</text>
+<rect id="rect22" x="5" y="294.111433639736" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(233,175,138);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.158200290276" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect22.mouseover" end="rect22.mouseout" /><set attributeName="font-size" to="8" begin="rect22.mouseover" end="rect22.mouseout" />Eukaryota;Archaeplastida;Rhodophyceae;Bangiales</text>
+<text x="22.5" y="299.158200290276" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect22.mouseover" end="rect22.mouseout" /><set attributeName="font-size" to="8" begin="rect22.mouseover" end="rect22.mouseout" />2</text>
+<rect id="rect23" x="5" y="294.204966940816" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(104,246,48);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.251733591356" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect23.mouseover" end="rect23.mouseout" /><set attributeName="font-size" to="8" begin="rect23.mouseover" end="rect23.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;(Alphaproteobacteria)</text>
+<text x="22.5" y="299.251733591356" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect23.mouseover" end="rect23.mouseout" /><set attributeName="font-size" to="8" begin="rect23.mouseover" end="rect23.mouseout" />2</text>
+<rect id="rect24" x="5" y="294.298500241896" width="35" height="0.0935333010804698" style="fill-opacity:0.5;stroke-width:1;fill:rgb(242,2,249);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.345266892437" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect24.mouseover" end="rect24.mouseout" /><set attributeName="font-size" to="8" begin="rect24.mouseover" end="rect24.mouseout" />Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales</text>
+<text x="22.5" y="299.345266892437" style="fill:black;fill-opacity:0.00584583131752936;font-size:0.0935333010804698px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect24.mouseover" end="rect24.mouseout" /><set attributeName="font-size" to="8" begin="rect24.mouseover" end="rect24.mouseout" />2</text>
+<rect id="rect25" x="5" y="294.392033542977" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(245,8,5);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.415416868247" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect25.mouseover" end="rect25.mouseout" /><set attributeName="font-size" to="8" begin="rect25.mouseover" end="rect25.mouseout" />Bacteria;Spirochaetota;Spirochaetia;Spirochaetales</text>
+<text x="22.5" y="299.415416868247" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect25.mouseover" end="rect25.mouseout" /><set attributeName="font-size" to="8" begin="rect25.mouseover" end="rect25.mouseout" />1</text>
+<rect id="rect26" x="5" y="294.438800193517" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(107,164,192);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.462183518787" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect26.mouseover" end="rect26.mouseout" /><set attributeName="font-size" to="8" begin="rect26.mouseover" end="rect26.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;Dstr-E11</text>
+<text x="22.5" y="299.462183518787" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect26.mouseover" end="rect26.mouseout" /><set attributeName="font-size" to="8" begin="rect26.mouseover" end="rect26.mouseout" />1</text>
+<rect id="rect27" x="5" y="294.485566844057" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(178,214,208);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.508950169328" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect27.mouseover" end="rect27.mouseout" /><set attributeName="font-size" to="8" begin="rect27.mouseover" end="rect27.mouseout" />Bacteria;Proteobacteria;Alphaproteobacteria;uncultured</text>
+<text x="22.5" y="299.508950169328" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect27.mouseover" end="rect27.mouseout" /><set attributeName="font-size" to="8" begin="rect27.mouseover" end="rect27.mouseout" />1</text>
+<rect id="rect28" x="5" y="294.532333494598" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(216,228,6);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.555716819868" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect28.mouseover" end="rect28.mouseout" /><set attributeName="font-size" to="8" begin="rect28.mouseover" end="rect28.mouseout" />Bacteria;Campylobacterota;Campylobacteria;Campylobacterales</text>
+<text x="22.5" y="299.555716819868" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect28.mouseover" end="rect28.mouseout" /><set attributeName="font-size" to="8" begin="rect28.mouseover" end="rect28.mouseout" />1</text>
+<rect id="rect29" x="5" y="294.579100145138" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(142,109,79);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.602483470408" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect29.mouseover" end="rect29.mouseout" /><set attributeName="font-size" to="8" begin="rect29.mouseover" end="rect29.mouseout" />Bacteria;Firmicutes;Bacilli;Staphylococcales</text>
+<text x="22.5" y="299.602483470408" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect29.mouseover" end="rect29.mouseout" /><set attributeName="font-size" to="8" begin="rect29.mouseover" end="rect29.mouseout" />1</text>
+<rect id="rect30" x="5" y="294.625866795678" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(121,161,189);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.649250120948" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect30.mouseover" end="rect30.mouseout" /><set attributeName="font-size" to="8" begin="rect30.mouseover" end="rect30.mouseout" />Bacteria;Proteobacteria;(Proteobacteria);(Proteobacteria)</text>
+<text x="22.5" y="299.649250120948" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect30.mouseover" end="rect30.mouseout" /><set attributeName="font-size" to="8" begin="rect30.mouseover" end="rect30.mouseout" />1</text>
+<rect id="rect31" x="5" y="294.672633446218" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(187,13,228);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.696016771488" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect31.mouseover" end="rect31.mouseout" /><set attributeName="font-size" to="8" begin="rect31.mouseover" end="rect31.mouseout" />Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales</text>
+<text x="22.5" y="299.696016771488" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect31.mouseover" end="rect31.mouseout" /><set attributeName="font-size" to="8" begin="rect31.mouseover" end="rect31.mouseout" />1</text>
+<rect id="rect32" x="5" y="294.719400096759" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(233,211,107);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.742783422029" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect32.mouseover" end="rect32.mouseout" /><set attributeName="font-size" to="8" begin="rect32.mouseover" end="rect32.mouseout" />Eukaryota;SAR;Alveolata;Protalveolata</text>
+<text x="22.5" y="299.742783422029" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect32.mouseover" end="rect32.mouseout" /><set attributeName="font-size" to="8" begin="rect32.mouseover" end="rect32.mouseout" />1</text>
+<rect id="rect33" x="5" y="294.766166747299" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(9,251,11);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.789550072569" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect33.mouseover" end="rect33.mouseout" /><set attributeName="font-size" to="8" begin="rect33.mouseover" end="rect33.mouseout" />Bacteria;Bacteroidota;Bacteroidia;(Bacteroidia)</text>
+<text x="22.5" y="299.789550072569" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect33.mouseover" end="rect33.mouseout" /><set attributeName="font-size" to="8" begin="rect33.mouseover" end="rect33.mouseout" />1</text>
+<rect id="rect34" x="5" y="294.812933397839" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(72,230,45);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.836316723109" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect34.mouseover" end="rect34.mouseout" /><set attributeName="font-size" to="8" begin="rect34.mouseover" end="rect34.mouseout" />Bacteria;Desulfobacterota;Desulfobacteria;Desulfobacterales</text>
+<text x="22.5" y="299.836316723109" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect34.mouseover" end="rect34.mouseout" /><set attributeName="font-size" to="8" begin="rect34.mouseover" end="rect34.mouseout" />1</text>
+<rect id="rect35" x="5" y="294.859700048379" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(103,23,147);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.883083373649" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect35.mouseover" end="rect35.mouseout" /><set attributeName="font-size" to="8" begin="rect35.mouseover" end="rect35.mouseout" />Eukaryota;SAR;Stramenopiles;Ochrophyta</text>
+<text x="22.5" y="299.883083373649" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect35.mouseover" end="rect35.mouseout" /><set attributeName="font-size" to="8" begin="rect35.mouseover" end="rect35.mouseout" />1</text>
+<rect id="rect36" x="5" y="294.90646669892" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(191,174,54);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.92985002419" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect36.mouseover" end="rect36.mouseout" /><set attributeName="font-size" to="8" begin="rect36.mouseover" end="rect36.mouseout" />Bacteria;Cyanobacteria;Cyanobacteriia;Synechococcales</text>
+<text x="22.5" y="299.92985002419" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect36.mouseover" end="rect36.mouseout" /><set attributeName="font-size" to="8" begin="rect36.mouseover" end="rect36.mouseout" />1</text>
+<rect id="rect37" x="5" y="294.95323334946" width="35" height="0.0467666505402349" style="fill-opacity:0.5;stroke-width:1;fill:rgb(220,112,230);" onmouseover="evt.target.setAttribute('stroke','red');" onmouseout="evt.target.setAttribute('stroke','none');" />
+<text x="48" y="299.97661667473" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;text-anchor:start;" ><set attributeName="fill-opacity" to="1" begin="rect37.mouseover" end="rect37.mouseout" /><set attributeName="font-size" to="8" begin="rect37.mouseover" end="rect37.mouseout" />Bacteria;Acidobacteriota;(Acidobacteriota);(Acidobacteriota)</text>
+<text x="22.5" y="299.97661667473" style="fill:black;fill-opacity:0.00292291565876468;font-size:0.0467666505402349px;;text-anchor:middle;" ><set attributeName="fill-opacity" to="1" begin="rect37.mouseover" end="rect37.mouseout" /><set attributeName="font-size" to="8" begin="rect37.mouseover" end="rect37.mouseout" />1</text>
+</svg>
+
+  </div>
+</div>
+<!--SUPPRESS_IF_NO_POSCOV-->
+<div class="fullwidth">
+  <div class="col40pc">
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 150" width="100%" height="100%">
+<text style="fill:black;font-size:14px;text-anchor:middle;font-weight:bold;" x="240" y="18" >Coverage on 18S model</text>
+<rect x="40" y="39.0492957746479" width="29.8360655737705" height="90.9507042253521" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="69.8360655737705" y="62.3943661971831" width="30.0655737704918" height="67.6056338028169" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="99.9016393442623" y="45.4929577464789" width="30.0655737704918" height="84.5070422535211" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="129.967213114754" y="68.0985915492958" width="29.8360655737705" height="61.9014084507042" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="159.803278688525" y="90.0704225352113" width="30.0655737704918" height="39.9295774647887" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="189.868852459016" y="129.049295774648" width="30.0655737704918" height="0.950704225352126" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="219.934426229508" y="116.69014084507" width="30.0655737704918" height="13.3098591549296" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="250" y="74.2253521126761" width="29.8360655737705" height="55.7746478873239" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="279.83606557377" y="51.3028169014084" width="30.0655737704918" height="78.6971830985916" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="309.901639344262" y="76.3380281690141" width="30.0655737704918" height="53.6619718309859" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="339.967213114754" y="105.070422535211" width="29.8360655737705" height="24.9295774647887" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="369.803278688525" y="106.866197183099" width="30.0655737704918" height="23.1338028169014" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="399.868852459016" y="101.901408450704" width="30.0655737704918" height="28.0985915492958" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="429.934426229508" y="114.154929577465" width="30.0655737704918" height="15.8450704225352" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<line x1="40" x2="460" y1="130" y2="130" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="40" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="62.7213114754098" x2="62.7213114754098" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="62.7213114754098" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="85.672131147541" x2="85.672131147541" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="85.672131147541" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">200</text>
+<line x1="108.622950819672" x2="108.622950819672" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="108.622950819672" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">300</text>
+<line x1="131.573770491803" x2="131.573770491803" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="131.573770491803" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">400</text>
+<line x1="154.524590163934" x2="154.524590163934" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="154.524590163934" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">500</text>
+<line x1="177.475409836066" x2="177.475409836066" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="177.475409836066" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">600</text>
+<line x1="200.426229508197" x2="200.426229508197" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="200.426229508197" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">700</text>
+<line x1="223.377049180328" x2="223.377049180328" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="223.377049180328" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">800</text>
+<line x1="246.327868852459" x2="246.327868852459" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="246.327868852459" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">900</text>
+<line x1="269.27868852459" x2="269.27868852459" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="269.27868852459" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1000</text>
+<line x1="292.229508196721" x2="292.229508196721" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="292.229508196721" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1100</text>
+<line x1="315.180327868852" x2="315.180327868852" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="315.180327868852" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1200</text>
+<line x1="338.131147540984" x2="338.131147540984" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="338.131147540984" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1300</text>
+<line x1="361.081967213115" x2="361.081967213115" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="361.081967213115" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1400</text>
+<line x1="384.032786885246" x2="384.032786885246" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="384.032786885246" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1500</text>
+<line x1="406.983606557377" x2="406.983606557377" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="406.983606557377" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1600</text>
+<line x1="429.934426229508" x2="429.934426229508" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="429.934426229508" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1700</text>
+<line x1="460" x2="460" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="460" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1831</text>
+<line x1="40" x2="40" y1="129.049295774648" y2="39.0492957746479" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="129.049295774648" y2="129.049295774648" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="119.43661971831" y2="119.43661971831" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="119.43661971831" text-anchor="end" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="40" x2="37.5" y1="108.87323943662" y2="108.87323943662" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="108.87323943662" text-anchor="end" fill="black" style="fill:black;font-size:8px;">200</text>
+<line x1="40" x2="37.5" y1="98.3098591549296" y2="98.3098591549296" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="98.3098591549296" text-anchor="end" fill="black" style="fill:black;font-size:8px;">300</text>
+<line x1="40" x2="37.5" y1="87.7464788732394" y2="87.7464788732394" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="87.7464788732394" text-anchor="end" fill="black" style="fill:black;font-size:8px;">400</text>
+<line x1="40" x2="37.5" y1="77.1830985915493" y2="77.1830985915493" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="77.1830985915493" text-anchor="end" fill="black" style="fill:black;font-size:8px;">500</text>
+<line x1="40" x2="37.5" y1="66.6197183098592" y2="66.6197183098592" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="66.6197183098592" text-anchor="end" fill="black" style="fill:black;font-size:8px;">600</text>
+<line x1="40" x2="37.5" y1="56.056338028169" y2="56.056338028169" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="56.056338028169" text-anchor="end" fill="black" style="fill:black;font-size:8px;">700</text>
+<line x1="40" x2="37.5" y1="45.4929577464789" y2="45.4929577464789" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="45.4929577464789" text-anchor="end" fill="black" style="fill:black;font-size:8px;">800</text>
+<line x1="40" x2="37.5" y1="39.0492957746479" y2="39.0492957746479" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="39.0492957746479" text-anchor="end" fill="black" style="fill:black;font-size:8px;">861</text>
+</svg>
+<span class="tooltiptext">Coverage evenness across eukaryotic 18S rRNA gene model from Barrnap, using Nhmmer from random subsample of mapped reads. This helps to detect contamination from tag sequencing libraries (sharp coverage peaks). For the eukaryotic model it is normal to see one or two regions with low coverage because of variable regions in the 18S rRNA gene that are not present in all organisms.</span></div>
+  </div>
+  <div class="col40pc">
+    <div class="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 150" width="100%" height="100%">
+<text style="fill:black;font-size:14px;text-anchor:middle;font-weight:bold;" x="240" y="18" >Coverage on 16S model</text>
+<rect x="40" y="73.75" width="52.3584905660377" height="56.25" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="92.3584905660377" y="90.625" width="52.6415094339623" height="39.375" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="145" y="113.125" width="52.3584905660377" height="16.875" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="197.358490566038" y="79.375" width="52.6415094339623" height="50.625" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="250" y="40" width="52.3584905660377" height="90" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="302.358490566038" y="96.25" width="52.6415094339623" height="33.75" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="355" y="23.125" width="52.3584905660377" height="106.875" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<rect x="407.358490566038" y="68.125" width="52.6415094339623" height="61.875" style="fill:blue;fill-opacity:0.5;stroke:none" />
+<line x1="40" x2="460" y1="130" y2="130" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="40" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="67.4528301886792" x2="67.4528301886792" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="67.4528301886792" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">100</text>
+<line x1="95.7547169811321" x2="95.7547169811321" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="95.7547169811321" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">200</text>
+<line x1="124.056603773585" x2="124.056603773585" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="124.056603773585" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">300</text>
+<line x1="152.358490566038" x2="152.358490566038" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="152.358490566038" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">400</text>
+<line x1="180.660377358491" x2="180.660377358491" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="180.660377358491" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">500</text>
+<line x1="208.962264150943" x2="208.962264150943" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="208.962264150943" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">600</text>
+<line x1="237.264150943396" x2="237.264150943396" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="237.264150943396" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">700</text>
+<line x1="265.566037735849" x2="265.566037735849" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="265.566037735849" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">800</text>
+<line x1="293.867924528302" x2="293.867924528302" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="293.867924528302" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">900</text>
+<line x1="322.169811320755" x2="322.169811320755" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="322.169811320755" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1000</text>
+<line x1="350.471698113208" x2="350.471698113208" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="350.471698113208" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1100</text>
+<line x1="378.77358490566" x2="378.77358490566" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="378.77358490566" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1200</text>
+<line x1="407.075471698113" x2="407.075471698113" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="407.075471698113" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1300</text>
+<line x1="435.377358490566" x2="435.377358490566" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="435.377358490566" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1400</text>
+<line x1="460" x2="460" y1="130" y2="132.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="460" y="141.5" text-anchor="middle" fill="black" style="fill:black;font-size:8px;">1487</text>
+<line x1="40" x2="40" y1="113.125" y2="23.125" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="113.125" y2="113.125" style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1="40" x2="37.5" y1="107.5" y2="107.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="107.5" text-anchor="end" fill="black" style="fill:black;font-size:8px;">4</text>
+<line x1="40" x2="37.5" y1="101.875" y2="101.875" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="101.875" text-anchor="end" fill="black" style="fill:black;font-size:8px;">5</text>
+<line x1="40" x2="37.5" y1="96.25" y2="96.25" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="96.25" text-anchor="end" fill="black" style="fill:black;font-size:8px;">6</text>
+<line x1="40" x2="37.5" y1="90.625" y2="90.625" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="90.625" text-anchor="end" fill="black" style="fill:black;font-size:8px;">7</text>
+<line x1="40" x2="37.5" y1="85" y2="85" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="85" text-anchor="end" fill="black" style="fill:black;font-size:8px;">8</text>
+<line x1="40" x2="37.5" y1="79.375" y2="79.375" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="79.375" text-anchor="end" fill="black" style="fill:black;font-size:8px;">9</text>
+<line x1="40" x2="37.5" y1="73.75" y2="73.75" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="73.75" text-anchor="end" fill="black" style="fill:black;font-size:8px;">10</text>
+<line x1="40" x2="37.5" y1="68.125" y2="68.125" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="68.125" text-anchor="end" fill="black" style="fill:black;font-size:8px;">11</text>
+<line x1="40" x2="37.5" y1="62.5" y2="62.5" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="62.5" text-anchor="end" fill="black" style="fill:black;font-size:8px;">12</text>
+<line x1="40" x2="37.5" y1="56.875" y2="56.875" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="56.875" text-anchor="end" fill="black" style="fill:black;font-size:8px;">13</text>
+<line x1="40" x2="37.5" y1="51.25" y2="51.25" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="51.25" text-anchor="end" fill="black" style="fill:black;font-size:8px;">14</text>
+<line x1="40" x2="37.5" y1="45.625" y2="45.625" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="45.625" text-anchor="end" fill="black" style="fill:black;font-size:8px;">15</text>
+<line x1="40" x2="37.5" y1="40" y2="40" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="40" text-anchor="end" fill="black" style="fill:black;font-size:8px;">16</text>
+<line x1="40" x2="37.5" y1="34.375" y2="34.375" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="34.375" text-anchor="end" fill="black" style="fill:black;font-size:8px;">17</text>
+<line x1="40" x2="37.5" y1="28.75" y2="28.75" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="28.75" text-anchor="end" fill="black" style="fill:black;font-size:8px;">18</text>
+<line x1="40" x2="37.5" y1="23.125" y2="23.125" style="stroke:rgb(0,0,0);stroke-width:1" />
+<text x="35.5" y="23.125" text-anchor="end" fill="black" style="fill:black;font-size:8px;">19</text>
+</svg>
+<span class="tooltiptext">Coverage evenness across prokaryotic 16S rRNA gene model from Barrnap, using Nhmmer from random subsample of mapped reads. This helps to detect contamination from tag sequencing libraries (sharp coverage peaks).</span>
+    </div>
+  </div>
+</div>
+<!--SUPPRESS_IF_NO_POSCOV_END-->
+<!--SUPPRESS_IF_NO_TREE-->
+<h3><a href="#" id="tree-show" class="showLink" onclick="showHide('tree');return false;">Tree of full-length assembled sequences (Click to hide)</a></h3>
+<div id="tree" class="less">
+<p>Full-length assembled SSU rRNA sequences along with closest hits from SILVA database, in an alignment guide tree produced by MAFFT. This tree helps to visualize the relatedness of sequences in library to known relatives. Colored circles have areas proportional to the number of SSU rRNA reads that map to each respective sequence (re-mapping is done separately for SPAdes, EMIRGE, and trusted-contig full-length sequence sets). Click on the toggle switches to turn them on and off. Additional circle representing proportion of SSU rRNA reads that were not assembled is in lower right corner. Long taxonomy strings of reference sequences are truncated, but the full strings are given in the tables below.</p>
+<p><b>Color key: </b><span style="color:blue;">Assembled by SPAdes</span>, <span style="color:green;">Reconstructed by EMIRGE</span>, <span style="color:orange">Extracted from trusted contigs</span>, </span> <span>Closest-matching reference sequence from SILVA database</span></p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 600 250" width="100%" height="100%">
+<g id="switches">
+	<text x="20" y="-20" style="font-size:10px;text-anchor:start" >Toggle reads mapped:</text>
+	<text x="190" y="-20" style="fill:blue;font-size:9px;text-anchor:end;" >SPAdes</text>
+	<rect id="spadesBubbleOn" x="200" y="-40" height="30" width="30" style="fill:rgb(93,173,226);opacity:1;" ><set attributeName="opacity" to="1" begin="spadesBubbleOn.click" /><set attributeName="opacity" to="0.1" begin="spadesBubbleOff.click" /></rect>
+	<text x="215" y="-20" style="text-anchor:middle;font-size:12px;fill:rgb(254,254,254);opacity:1;" ><set attributeName="fill" to="rgb(254,254,254)" begin="spadesBubbleOn.click" /><set attributeName="fill" to="rgb(214,234,248)" begin="spadesBubbleOff.click" />I</text>
+	<rect id="spadesBubbleOff" x="230" y="-40" height="30" width="30" style="fill:rgb(93,173,226);opacity:0.1;" ><set attributeName="opacity" to="1" begin="spadesBubbleOff.click" /><set attributeName="opacity" to="0.1" begin="spadesBubbleOn.click" /></rect>
+	<text x="245" y="-20" style="text-anchor:middle;font-size:12px;fill:rgb(214,234,248);opacity:1;" ><set attributeName="fill" to="rgb(254,254,254)" begin="spadesBubbleOff.click" /><set attributeName="fill" to="rgb(214,234,248)" begin="spadesBubbleOn.click" />O</text>
+</g>
+<circle id="circle_T2" cx="204" cy="75" r="60px" visibility="visible" style="fill:rgb(174,214,241);fill-opacity:0.25;stroke:rgb(27,79,114);stroke-opacity:0.1;" ><set attributeName="fill-opacity" to="1" begin="T2.mouseover" end="T2.mouseout" /><set attributeName="visibility" to="visible" begin="spadesBubbleOn.click" /><set attributeName="visibility" to="hidden" begin="spadesBubbleOff.click" /></circle><text x="174" y="75" visibility="hidden" style="font-size:10px;text-anchor:end;fill:rgb(255,128,0)" ><set attributeName="visibility" to="visible" begin="T2.mouseover" end="T2.mouseout" />Reads: 7504</text>
+<circle id="circle_T4" cx="204" cy="175" r="8.65101643090836px" visibility="visible" style="fill:rgb(174,214,241);fill-opacity:0.25;stroke:rgb(27,79,114);stroke-opacity:0.1;" ><set attributeName="fill-opacity" to="1" begin="T4.mouseover" end="T4.mouseout" /><set attributeName="visibility" to="visible" begin="spadesBubbleOn.click" /><set attributeName="visibility" to="hidden" begin="spadesBubbleOff.click" /></circle><text x="199.674491784546" y="175" visibility="hidden" style="font-size:10px;text-anchor:end;fill:rgb(255,128,0)" ><set attributeName="visibility" to="visible" begin="T4.mouseover" end="T4.mouseout" />Reads: 156</text>
+<circle id="circle_unassembled" cx="564.37131794362" cy="164.37131794362" r="35.6286820563802px" style="fill:rgb(255,200,200);fill-opacity:0.25;stroke:blue;stroke-opacity:0.1;" /><text x="564.37131794362" y="188" visibility="hidden" style="text-anchor:end;font-size:12px;fill:rgb(255,180,180);" ><set attributeName="visibility" to="visible" begin="circle_unassembled.mouseover" end="circle_unassembled.mouseout" />Unassembled SSU reads: 2646</text>
+<g id="0" style="stroke:rgb(0,0,0);stroke-width:1">
+	<line x1="0" x2="0" y1="100" y2="100" />
+	<line x1="0" x2="0" y1="100" y2="100" />
+	<line x1="0" x2="0" y1="100" y2="100" />
+</g>
+<g id="3" style="stroke:rgb(0,0,0);stroke-width:1">
+	<line x1="155.391185995213" x2="155.391185995213" y1="150" y2="125" />
+	<line x1="155.391185995213" x2="155.391185995213" y1="150" y2="175" />
+	<line x1="155.391185995213" x2="0" y1="150" y2="150" />
+</g>
+<g id="2" style="stroke:rgb(0,0,0);stroke-width:1">
+	<line x1="191.419345754916" x2="191.419345754916" y1="50" y2="25" />
+	<line x1="191.419345754916" x2="191.419345754916" y1="50" y2="75" />
+	<line x1="191.419345754916" x2="0" y1="50" y2="50" />
+</g>
+<g id="1" style="stroke:rgb(0,0,0);stroke-width:1">
+	<line x1="0" x2="0" y1="100" y2="50" />
+	<line x1="0" x2="0" y1="100" y2="150" />
+	<line x1="0" x2="0" y1="100" y2="100" />
+</g>
+<g id="T3">
+	<line x1="204" x2="155.391185995213" y1="125" y2="125" style="stroke:rgb(0,0,0);stroke-width:1" />
+	<text x="204" y="125" style="font-size:6px;" >AB016595.1.1792 Eukaryota;SAR;Alveolata;Dinoflagellata; ... odiniphycidae;Suessiaceae;Symbiodinium;Symbiodinium sp.</text>
+</g>
+<g id="T1">
+	<line x1="204" x2="191.419345754916" y1="25" y2="25" style="stroke:rgb(0,0,0);stroke-width:1" />
+	<text x="204" y="25" style="font-size:6px;" >AF052887.1.1797 Eukaryota;Amorphea;Obazoa;Opisthokonta; ... Anthozoa;Hexacorallia;Scleractinia;Phyllangia mouchezii</text>
+</g>
+<g id="T2">
+	<line x1="204" x2="191.419345754916" y1="75" y2="75" style="stroke:rgb(0,0,0);stroke-width:1" />
+	<text x="204" y="75" style="font-size:6px;fill:blue;" >pf_DT26_OFRA_3H_August_2022.PFspades_1_78.178014</text>
+</g>
+<g id="T4">
+	<line x1="204" x2="155.391185995213" y1="175" y2="175" style="stroke:rgb(0,0,0);stroke-width:1" />
+	<text x="204" y="175" style="font-size:6px;fill:blue;" >pf_DT26_OFRA_3H_August_2022.PFspades_2_1.807356</text>
+</g>
+</svg>
+
+</div>
+<!--SUPPRESS_IF_NO_TREE_END-->
+
+<!--SUPPRESS_IF_NO_TREEMAP-->
+<h3><a href="#" id="treemap-show" class="showLink" onclick="showHide('chart_div');showHide('treemap');return false;">Interactive treemap of mapping-based taxonomic read classification (Click to hide)</a></h3>
+<div id="treemap" class="less">
+  <p><b>Navigation</b>: Left-click to go down, right-click to go up in taxonomic hierarchy, hover to see counts.</p>
+  <p>Based on read-mapping hits to reference database, provides an approximate overview of taxonomic composition.</p>
+  <p>Drawn with Google Visualization API (<a href="https://developers.google.com/chart/terms">terms of service</a>)</p>
+  </div>
+  <div id="chart_div" style="width: 900px; height: 500px; display:block"></div>
+<!--SUPPRESS_IF_NO_TREEMAP_END-->
+
+<h2><a href="#" id="inputparams-show" class="showLink" onclick="hideShow('inputparams');return false;">Input parameters</a></h2>
+<div id="inputparams" class="more">
+  <table class="slimTable">
+    <tr>
+      <th>Input command</th>
+      <td>phyloFlash.pl -CPUs 32 -lib pf_DT26_OFRA_3H_August_2022 -read1 /home/jklinges/Klinges/DRTO_meta_DNA/bowtie/final_fqs/DT26_OFRA_3H_August_2022_final_1.fastq -read2 /home/jklinges/Klinges/DRTO_meta_DNA/bowtie/final_fqs/DT26_OFRA_3H_August_2022_final_2.fastq -readlength 150 -almosteverything -dbhome /home/jklinges/Klinges/databases/138.1</td>
+    </tr>
+    <tr>
+      <th>Forward read file</th>
+      <td>/home/jklinges/Klinges/DRTO_meta_DNA/bowtie/final_fqs/DT26_OFRA_3H_August_2022_final_1.fastq</td>
+    </tr>
+  <!--SUPPRESS_IF_SE_READS-->
+    <tr>
+      <th>Reverse read file</th>
+      <td>/home/jklinges/Klinges/DRTO_meta_DNA/bowtie/final_fqs/DT26_OFRA_3H_August_2022_final_2.fastq</td>
+    </tr>
+  <!--SUPPRESS_IF_SE_READS_END-->
+    <tr>
+      <th><span class="withHoverText" title="Minimum sequence identity for mapping to SSU database to be accepted">Minimum mapping identity</span></th>
+      <td>70%</td>
+    </tr>
+    <tr>
+      <th>Working folder</th>
+      <td>/data/gdcsdata/Research/Researcher/Klinges/DRTO_meta_DNA/phyloFlash/pf2_DT26_OFRA_3H_August_2022</td>
+    </tr>
+    <tr>
+      <th>Database used</th>
+      <td>/home/jklinges/Klinges/databases/138.1</td>
+    </tr>
+  </table>
+</div>
+
+<h2>Results</h2>
+
+<h3><a href="#" id="mapstats-show" class="showLink" onclick="hideShow('mapstats');return false;">Mapping statistics</a></h3>
+<div id="mapstats" class="more">
+  <table class="slimTable">
+  <!--SUPPRESS_IF_SE_READS-->
+    <tr>
+      <th>Input PE-reads</th>
+      <td>16373442</td>
+    </tr>
+    <tr>
+      <th>Mapped SSU read pairs</th>
+      <td>6204</td>
+    </tr>
+  <!--SUPPRESS_IF_SE_READS_END-->
+  <!--SUPPRESS_IF_PE_READS_END-->
+    <tr>
+      <th><span class="withHoverText" title="Fraction of library mapping to SSU references">Mapping ratio</span></th>
+      <td>0.038%</td>
+    </tr>
+  <!--SUPPRESS_IF_SKIP_SPADES-->
+    <tr>
+      <th><span class="withHoverText" title="Fraction of extracted SSU reads assembled">Fraction assembled</span></th>
+      <td>74.326%</td>
+    </tr>
+  <!--SUPPRESS_IF_SKIP_SPADES_END-->
+  <!--SUPPRESS_IF_SE_READS-->
+    <tr>
+      <th>Detected median insert size</th>
+      <td>556</td>
+    </tr>
+  <!--SUPPRESS_IF_SE_READS_END-->
+  <!--SUPPRESS_IF_SKIP_EMIRGE_END-->
+  <!--SUPPRESS_IF_SE_READS-->
+    <tr>
+      <th>Insert size standard deviation</th>
+      <td>168</td>
+    </tr>
+  <!--SUPPRESS_IF_SE_READS_END-->
+  </table>
+</div>
+
+<h3><a href="#" id="outfiles-show" class="showLink" onclick="hideShow('outfiles');return false;">Output files</a></h3>
+<div id="outfiles" class="more">
+  <table class="slimTable">
+  <tr>
+    <th>Reads (fwd) mapping to SSU rRNA database</th>
+    <td>pf_DT26_OFRA_3H_August_2022.DT26_OFRA_3H_August_2022_final_1.fastq.SSU.1.fq</td>
+  </tr>
+  <tr>
+    <th>Reads (rev) mapping to SSU rRNA database</th>
+    <td>pf_DT26_OFRA_3H_August_2022.DT26_OFRA_3H_August_2022_final_1.fastq.SSU.2.fq</td>
+  </tr>
+  <tr>
+    <th>SAM file of initial read mapping to SSU rRNA database</th>
+    <td>pf_DT26_OFRA_3H_August_2022.DT26_OFRA_3H_August_2022_final_1.fastq.SSU.sam</td>
+  </tr>
+  <tr>
+    <th>FASTA file of alignment of all full-length sequences</th>
+    <td>pf_DT26_OFRA_3H_August_2022.SSU.collection.alignment.fasta</td>
+  </tr>
+  <tr>
+    <th>FASTA file of all full-length sequences and their closest database hits</th>
+    <td>pf_DT26_OFRA_3H_August_2022.SSU.collection.fasta</td>
+  </tr>
+  <tr>
+    <th>Newick guide tree from MAFFT alignment of all full-length sequences and closest database hits</th>
+    <td>pf_DT26_OFRA_3H_August_2022.SSU.collection.fasta.tree</td>
+  </tr>
+  <tr>
+    <th>SVG graphic of guide tree from MAFFT alignment of all full-length sequences and closest database hits</th>
+    <td>pf_DT26_OFRA_3H_August_2022.SSU.collection.fasta.tree.svg</td>
+  </tr>
+  <tr>
+    <th>FASTA file of full-length SSU sequences</th>
+    <td>pf_DT26_OFRA_3H_August_2022.all.final.fasta</td>
+  </tr>
+  <tr>
+    <th>Raw BBmap SAM file of initial read mapping to SSU rRNA database</th>
+    <td>pf_DT26_OFRA_3H_August_2022.bbmap.sam</td>
+  </tr>
+  <tr>
+    <th>Mapping identity histogram from BBmap</th>
+    <td>pf_DT26_OFRA_3H_August_2022.idhistogram</td>
+  </tr>
+  <tr>
+    <th>Insert size histogram from BBmap</th>
+    <td>pf_DT26_OFRA_3H_August_2022.inserthistogram</td>
+  </tr>
+  <tr>
+    <th>phyloFlash report in plain text</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash</td>
+  </tr>
+  <tr>
+    <th>NTU abundances (truncated to requested taxonomic level) from initial mapping, in CSV format</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.NTUabundance.csv</td>
+  </tr>
+  <tr>
+    <th>SVG graphic of taxonomic composition from initial read mapping</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.NTUabundance.csv.svg</td>
+  </tr>
+  <tr>
+    <th>NTU abundances (untruncated) from initial mapping, in CSV format</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.NTUfull_abundance.csv</td>
+  </tr>
+  <tr>
+    <th>Taxonomic classification of full-length sequences, in CSV format</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.extractedSSUclassifications.csv</td>
+  </tr>
+  <tr>
+    <th>phyloFlash report in CSV format</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.report.csv</td>
+  </tr>
+  <tr>
+    <th>Taxonomic composition of unassembled SSU reads in CSV format</th>
+    <td>pf_DT26_OFRA_3H_August_2022.phyloFlash.unassembled.NTUabundance.csv</td>
+  </tr>
+  <tr>
+    <th>Log file from SPAdes assembler</th>
+    <td>pf_DT26_OFRA_3H_August_2022.spades.out</td>
+  </tr>
+
+  </table>
+</div>
+
+<h3><a href="#" id="taxa-show" class="showLink" onclick="hideShow('taxa');return false;">Taxonomic affiliation of SSU rRNA reads in library</a></h3>
+<div id="taxa" class="more">
+  <p>Approximate overview of taxonomic composition of ALL reads, based on mapping hits to SILVA SSU rRNA database using BBmap.</p>
+  <table class="slimTable">
+    <tr>
+      <th>NTUs observed once</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>NTUs observed twice</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>NTUs observed three or more times</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th><span class="withHoverText" title="Statistical index of alpha diversity in sample, from Chao 1984">NTU Chao1 richness estimate</span></th>
+      <td>30.071</td>
+    </tr>
+  </table>
+  <p>Taxonomy summarized at level 4. Only displaying taxa with > 3 reads mapped.</p>
+  <table>
+    <tr>
+      <th><span class="withHoverText" title="Higher taxon found by SSU mapping to SILVA reference database">Taxon</span></th>
+      <th><span class="withHoverText" title="No. reads (single) mapped to this taxonomic group">Reads</span></th>
+    </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Obazoa;Opisthokonta</td>
+    <td>5650</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;(Eukaryota);(Eukaryota);(Eukaryota)</td>
+    <td>122</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;SAR;Alveolata;Dinoflagellata</td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;SAR;Alveolata;Apicomplexa</td>
+    <td>107</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;(Amorphea);(Amorphea)</td>
+    <td>71</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Archaeplastida;Chloroplastida;Charophyta</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Amoebozoa;Incertae Sedis</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Amoebozoa;Discosea</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Cloacimonadota;Cloacimonadia;MSBL2</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Bacteria;(Bacteria);(Bacteria);(Bacteria)</td>
+    <td>4</td>
+  </tr>
+
+  </table>
+</div>
+
+<!--SUPPRESS_IF_SKIP_SPADES-->
+<h3><a href="#" id="spades-show" class="showLink" onClick="hideShow('spades');return false;">SSU rRNA assembly-based taxa</a></h3>
+<div id="spades" class="more">
+<p>Full-length SSU rRNA sequences assembled by SPAdes, matched to SILVA database with Vsearch.</p>
+<table>
+  <tr>
+    <th><span class="withHoverText" title="Name assigned to assembled SSU sequence">OTU</span></th>
+    <th><span class="withHoverText" title="Number of reads re-mapping to assembled SSU sequence">Mapped</span></th>
+    <th><span class="withHoverText" title="Per-base kmer coverage of assembled SSU sequence, from assembler">Cov</span></th>
+    <th><span class="withHoverText" title="Closest hit in SSU reference database">DB hit</span></th>
+    <th>Taxonomy</th>
+    <th>% ID</th>
+    <th><span class="withHoverText" title="Length of pairwise alignment between assembled SSU sequence and reference">Alnlen</span></th>
+    <th>Evalue</th>
+  </tr>
+  <tr>
+    <td>pf_DT26_OFRA_3H_August_2022.PFspades_1</td>
+    <td>7504</td>
+    <td>78.178014</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/nuccore/AF052887">AF052887.1.1797</a></td>
+    <td>Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Cnidaria;Anthozoa;Hexacorallia;Scleractinia;Phyllangia mouchezii</td>
+    <td>99.3</td>
+    <td>1791</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>pf_DT26_OFRA_3H_August_2022.PFspades_2</td>
+    <td>156</td>
+    <td>1.807356</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/nuccore/AB016595">AB016595.1.1792</a></td>
+    <td>Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Suessiaceae;Symbiodinium;Symbiodinium sp.</td>
+    <td>96.4</td>
+    <td>1793</td>
+    <td>-1</td>
+  </tr>
+
+</table>
+</div>
+<!--SUPPRESS_IF_SKIP_SPADES_END-->
+
+<!--SUPPRESS_IF_SKIP_EMIRGE_END-->
+
+<!--SUPPRESS_IF_SKIP_TRUSTED-->
+<h3><a href="#" id="trusted-show" class="showLink" onclick="hideShow('trusted');return false;">SSU rRNA from trusted contigs</a></h3>
+<div id="trusted" class="more">
+<p>Full-length SSU rRNA seqeunces extracted from trusted contigs file, matched to SILVA database by Vsearch.</p>
+<table>
+  <tr>
+    <th><span class="withHoverText" title="Name assigned to assembled SSU sequence">OTU</span></th>
+    <th><span class="withHoverText" title="Number of reads re-mapping to assembled SSU sequence">Mapped</span></th>
+    <th><span class="withHoverText" title="Closest hit in SSU reference database">DB hit</span></th>
+    <th>Taxonomy</th>
+    <th>% ID</th>
+    <th><span class="withHoverText" title="Length of pairwise alignment between extracted SSU sequence and reference">Alnlen</span></th>
+    <th>Evalue</th>
+  </tr>
+<!--TRUSTED_SSU_TABLE-->
+</table>
+</div>
+<!--SUPPRESS_IF_SKIP_TRUSTED_END-->
+
+<!--SUPPRESS_IF_NO_TREE-->
+<h3><a href="#" id="unassemtaxa-show" class="showLink" onclick="hideShow('unassemtaxa');return false;">Taxonomic affiliation of unassembled SSU rRNA reads</a></h3>
+<div id="unassemtaxa" class="more">
+<p>Approximate overview of taxonomic composition for reads that did NOT assemble into full-length sequences, based on mapping hits to SILVA SSU rRNA database with BBmap.</p>
+<p>Taxonomy summarized at level 4. Only displaying taxa with > 3 reads mapped.</p>
+<table>
+  <tr>
+    <th><span class="withHoverText" title="Higher taxon found by SSU mapping to SILVA reference database">Taxon</span></th>
+    <th><span class="withHoverText" title="No. reads (single) mapped to this taxonomic group">Reads</span></th>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Obazoa;Opisthokonta</td>
+    <td>1947</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;(Eukaryota);(Eukaryota);(Eukaryota)</td>
+    <td>160</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;SAR;Alveolata;Apicomplexa</td>
+    <td>153</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Cyanobacteria;Cyanobacteriia;Chloroplast</td>
+    <td>92</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;SAR;Alveolata;Dinoflagellata</td>
+    <td>81</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;(Amorphea);(Amorphea)</td>
+    <td>64</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Archaeplastida;Chloroplastida;Charophyta</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Amoebozoa;Discosea</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Amorphea;Amoebozoa;Incertae Sedis</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Cloacimonadota;Cloacimonadia;MSBL2</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Bacteria;(Bacteria);(Bacteria);(Bacteria)</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Alphaproteobacteria;Kiloniellales</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Bacteroidota;Bacteroidia;Cytophagales</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Alphaproteobacteria;Rhodospirillales</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Alphaproteobacteria;(Alphaproteobacteria)</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Bacteria;Halanaerobiaeota;Halanaerobiia;Halanaerobiales</td>
+    <td>4</td>
+  </tr>
+
+</table>
+</div>
+<!--SUPPRESS_IF_NO_TREE_END-->
+
+<h3><a href="#" id="cite-show" class="showLink" onclick="hideShow('cite');return false;">Please cite...</a></h3>
+<div id="cite" class="more">
+<p>Harald R Gruber-Vodicka, Brandon KB Seah, Elmar Pruesse. 2019 (preprint). phyloFlash - Rapid SSU rRNA profiling and targeted assembly from metagenomes. <a href="https://doi.org/10.1101/521922">bioRxiv 521922</a>; doi: https://doi.org/10.1101/521922</p>
+
+<h4>Cite dependencies when used</h4>
+  <ul>
+    <li>Quast C. et al. 2013. The SILVA ribosomal RNA gene database project: improved data processing and web-based tools. <i>Nucl. Acids Res.</i> 41: D590-D596. doi:<a href="http://dx.doi.org/10.1093/nar/gks1219">10.1093/nar/gks1219</a>. <a href="https://www.arb-silva.de">Homepage</a></li>
+    <li>Bushnell B. BBMap. Online: <a href="https://sourceforge.net/projects/bbmap/">https://sourceforge.net/projects/bbmap/</a></li>
+    <li>Bankevich A., et al. 2012. SPAdes: A New Genome Assembly Algorithm and Its Applications to Single-Cell Sequencing. <i>J. Comput. Biol.</i> 19 (5): 455-477. doi:<a href="http://dx.doi.org/10.1089/cmb.2012.0021spades">10.1089/cmb.2012.0021</a>. <a href="http://bioinf.spbau.ru/spades">Homepage</a>.</li>
+    <li>Katoh K., Standley D.M.. 2013. MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability. <i>Mol. Biol. Evol.</i> 30 (4): 772-780. doi:<a href="http://dx.doi.org/10.1093/molbev/mst010">10.1093/molbev/mst010</a>. <a href="http://mafft.cbrc.jp/alignment/software/">Homepage</a></li>
+    <li>Rognes T. et al. 2016. VSEARCH: a versatile open source tool for metagenomics. <i>PeerJ</i> 4: e2584. doi:<a href="http://dx.doi.org/10.7717/peerj.2584">10.7717/peerj.2584</a>. <a href="https://github.com/torognes/vsearch">Homepage</a></li>
+    <li>Miller C.S. et al. 2011. EMIRGE: reconstruction of full-length ribosomal genes from microbial community short read sequencing data. <i>Genome Biol.</i> 12: R44. doi:<a href="http://dx.doi.org/10.1186/gb-2011-12-5-r44">10.1186/gb-2011-12-5-r44</a>. <a href="https://github.com/csmiller/EMIRGE">Homepage</a></li>
+    <li>Kopylova E., Noé L., Touzet H. 2012. SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data. <i>Bioinformatics</i> 28 (24): 3211-3217. doi: <a href="http://dx.doi.org/10.1093/bioinformatics/bts611">10.1093/bioinformatics/bts611</a>. <a href="http://bioinfo.lifl.fr/RNA/sortmerna/">Homepage</a></li>
+    <li>Bedtools. Online: <a href="http://bedtools.readthedocs.io/en/latest/">http://bedtools.readthedocs.io/en/latest/</a></li>
+    <li>Seemann T. Barrnap. Online: <a href="https://github.com/tseemann/barrnap">https://github.com/tseemann/barrnap</a></li>
+    <li>Wheeler T.J., Eddy S.R. 2013. nhmmer: DNA homology search with profile HMMs. <i>Bioinformatics</i> 29 (19): 2487-2489. doi:<a href="http://dx.doi.org/10.1093/bioinformatics/btt403">10.1093/bioinformatics/btt403</a> <a href="http://hmmer.org/">Homepage</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
