@@ -1,0 +1,196 @@
+library(randomForest)
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(forcats)
+library(phyloseq)
+
+setwd("~/DRTO_metaG")
+load("~/DRTO_/drto_pf_rel.RData")
+
+drto_rel <- tax_glom(drto_rel, "Family")
+
+rel_otu <- as.data.frame(drto_rel@otu_table)
+tax <- as.data.frame(drto_rel@tax_table)
+fax <- tax[,tax$Family]
+colnames(rel_otu) <- fax
+sampledf <- data.frame(sample_data(drto_rel))
+
+rel_filtered <- rel_otu[, colMeans(rel_otu > 0) > 0.1]
+clr <- microbiome::transform(rel_filtered, 'clr')
+
+x <- clr
+y <- sampledf$health.status
+rf_model <- randomForest(x = x, y = as.factor(y), importance = TRUE, ntree = 1000)
+
+errors <- rf_model$err.rate
+write.csv(errors, "error_rates.csv", row.names = FALSE)
+
+# Extract the last row of error rates (final after all trees)
+final_err <- rf_model$err.rate[nrow(rf_model$err.rate), ]
+
+# Overall OOB error rate
+overall_oob_error <- final_err["OOB"]
+cat("Overall OOB Error Rate:", round(overall_oob_error * 100, 2), "%\n")
+
+# Class-specific OOB error rates (all columns except "OOB")
+class_errors <- final_err[names(final_err) != "OOB"]
+
+# Print class-specific error rates as percentages
+cat("Class-specific OOB Error Rates:\n")
+print(round(class_errors * 100, 2))
+
+#OOB means out-of-bag
+png("rf_error_rates.png", width = 8, height = 6, units = "in", res = 300)
+
+plot(rf_model, main = "Random Forest OOB Error Rates")
+legend("topright", 
+       legend = colnames(rf_model$err.rate), 
+       col = 1:ncol(rf_model$err.rate), 
+       lty = 1, 
+       cex = 0.8)
+dev.off()
+
+# View importance
+importance_scores <- importance(rf_model)
+varImpPlot(rf_model)
+importance_df <- as.data.frame(importance_scores)
+importance_df$Taxa <- rownames(importance_df)
+
+# Choose one importance metric (e.g., MeanDecreaseAccuracy)
+top_taxa <- importance_df %>%
+  arrange(desc(MeanDecreaseAccuracy)) %>%
+  slice_head(n = 20)  # top 20 predictors
+
+# `x`: data frame of taxa (columns = taxa, rows = samples)
+# `y`: vector or factor of disease class labels, length = nrow(x)
+x <- clr
+y <- sampledf$health.status
+
+disease_classes <- unique(y)
+taxa_predictors <- list()
+oob_errors <- data.frame(Class = character(), OOB_Error = numeric())
+
+set.seed(123) 
+for (class in disease_classes) {
+  cat("Running RF for:", class, "\n")
+  
+  # One-vs-all target
+  binary_y <- factor(ifelse(y == class, class, paste0("not_", class)))
+  
+  # Train Random Forest
+  rf_model <- randomForest(x = x, y = binary_y, importance = TRUE)
+  
+  # Extract importance
+  importance_df <- as.data.frame(importance(rf_model))
+  importance_df$Taxa <- rownames(importance_df)
+  importance_df$Disease_Class <- class
+  
+  # Get final OOB error
+  oob_err <- tail(rf_model$err.rate[, "OOB"], n = 1)
+  
+  # Save to results
+  oob_errors <- rbind(oob_errors, data.frame(Class = class, OOB_Error = oob_err))
+  
+  # Use MeanDecreaseAccuracy for interpretability
+  importance_df <- importance_df %>%
+    arrange(desc(MeanDecreaseAccuracy)) %>%
+    slice_head(n = 10)  # top 10 predictors
+  
+  taxa_predictors[[class]] <- importance_df
+}
+
+oob_errors
+
+# Combine all class-specific results
+predictor_table <- bind_rows(taxa_predictors)
+write.csv(predictor_table, "top_predictive_taxa_per_class.csv", row.names = FALSE)
+
+#A higher Mean Decrease in Accuracy means that variable (taxon) 
+#is more important for correctly classifying the disease classes.
+#So, taxa with large positive MDA values are strong predictors.
+
+MDA <- ggplot(predictor_table, aes(x = reorder(Taxa, MeanDecreaseAccuracy), 
+                            y = MeanDecreaseAccuracy, fill = Disease_Class)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  facet_wrap(~ Disease_Class, scales = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "Top Taxa Predicting Each Disease Class",
+       x = "Taxa", y = "Mean Decrease in Accuracy")
+MDA 
+ggsave(filename="mda_rf_health.status.png", plot=MDA, height = 5, width = 8, device="png", dpi=500)
+
+#Gini
+#
+# A higher Mean Decrease in Gini means the variable is more important 
+# in creating "cleaner" splits in the trees and thus better at separating classes.
+# Gini impurity is a measure of the diversity or randomness within a node. 
+# A node with high Gini impurity contains a mix of different classes, 
+# while a node with low Gini impurity contains mostly one class.
+# It quantifies the probability of incorrectly classifying a randomly chosen element from the 
+# node if it were randomly labeled based on the class distribution of that node. 
+# Gini coeffecient equals 0 if the classification model is perfect
+# 
+MDG <- ggplot(predictor_table, aes(x = reorder(Taxa, MeanDecreaseGini), 
+                            y = MeanDecreaseGini, fill = Disease_Class)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  facet_wrap(~ Disease_Class, scales = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "Top Taxa Predicting Each Disease Class",
+       x = "Taxa", y = "Mean Decrease in Gini")
+MDG
+ggsave(filename="mdg_rf_health.status.png", plot=MDG, height = 5, width = 8, device="png", dpi=500)
+
+importance_df <- as.data.frame(importance(rf_model))
+
+# Extract overall importance columns only
+importance_overall <- importance_df[, c("MeanDecreaseAccuracy", "MeanDecreaseGini")]
+
+#Top 10 taxa by MeanDecreaseAccuracy
+library(dplyr)
+importance_overall <- importance_overall %>%
+  mutate(Taxa = rownames(importance_overall)) %>%
+  arrange(desc(MeanDecreaseAccuracy))
+
+top_MDA <- importance_overall %>% slice(1:10)
+top_MDA
+
+importance_overall <- importance_overall %>%
+  mutate(Taxa = rownames(importance_overall)) %>%
+  arrange(desc(MeanDecreaseGini))
+
+top_MDG <- importance_overall %>% slice(1:10)
+top_MDG
+
+importance_df <- as.data.frame(importance(rf_model))
+
+# Keep only MDA and MDG columns
+importance_df <- importance_df %>%
+  select(MeanDecreaseAccuracy, MeanDecreaseGini)
+
+# Add Taxon as a column
+importance_df$Taxon <- rownames(importance_df)
+
+# Optional: Filter top taxa by either MDA or MDG
+top_taxa <- importance_df %>%
+  arrange(desc(MeanDecreaseAccuracy)) %>%
+  slice(1:20)  # adjust to your desired top N
+
+# Convert to long format
+importance_long <- top_taxa %>%
+  pivot_longer(cols = c(MeanDecreaseAccuracy, MeanDecreaseGini),
+               names_to = "Metric", values_to = "Value")
+
+# Plot
+plot <- ggplot(importance_long, aes(x = reorder(Taxon, Value), y = Value, fill = Metric)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  scale_fill_manual(values = c("MeanDecreaseAccuracy" = "#1f77b4", "MeanDecreaseGini" = "#ff7f0e")) +
+  labs(title = "Top Taxa by Random Forest Importance Metrics",
+       x = "Taxon", y = "Importance Score",
+       fill = "Metric") +
+  theme_bw(base_size = 14)
+ggsave(filename="discriminant_taxa_overall.png", plot=plot, height = 5, width = 8, device="png", dpi=500)
+
