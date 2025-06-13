@@ -1,24 +1,17 @@
 library(tidyverse)
 
-func_cluster = read.table(file = "functional_pathway_clusters_dis.txt", header = TRUE, )
-hog_cluster = read.table(file = "HOG_clusters_dis.txt", header = TRUE, )
+func_cluster = read.table(file = "functional_pathway_clusters_all.txt", header = TRUE, )
+hog_cluster = read.table(file = "HOG_clusters_all.txt", header = TRUE, )
 #meta = read.csv(file = "metadata.csv", header = TRUE, )
+
+func_cluster <- func_cluster[ , grep("\\.Dis$", names(func_cluster))]
+hog_cluster <- hog_cluster[ , grep("\\.Dis$", names(hog_cluster))]
+
+#func_cluster <- func_cluster[ , grep("\\.N$", names(func_cluster))]
+#hog_cluster <- hog_cluster[ , grep("\\.N$", names(hog_cluster))]
 
 rownames(hog_cluster) <- paste0("OG_", rownames(hog_cluster))
 rownames(func_cluster) <- paste0("Pathway_", rownames(func_cluster))
-
-#exporting metadata as a separate file to make dataframe purely numeric
-func_meta <- as.data.frame(func_cluster$Pathway)
-rownames(func_meta) <- rownames(func_cluster)
-#write.table(func_meta, file = "func_clusters_names_dis.txt", sep = "\t")
-func_cluster <- func_cluster %>% select(-Pathway)
-rm(func_meta)
-
-hog_meta <- as.data.frame(hog_cluster$HOG_terms)
-rownames(hog_meta) <- rownames(hog_cluster)
-#write.table(hog_meta, file = "hog_clusters_names.txt", sep = "\t")
-hog_cluster <- hog_cluster %>% select(-HOG_terms)
-rm(hog_meta)
 
 func <- as.data.frame(t(func_cluster))
 rm(func_cluster)
@@ -58,12 +51,10 @@ results_long <- as_tibble(cor_mat, rownames = "HOG_ID") %>%
 results_long <- results_long %>%
   mutate(p_adj = p.adjust(p_value, method = "fdr"))
 
-filtered_results <- results_long %>%
-  filter(abs(Correlation) > 0.79) %>%  # keep strong positive and negative correlations
-  arrange(desc(abs(Correlation))) 
-
 sig_results <- results_long %>%
-  filter(abs(p_adj) < 0.05) %>%  # only keep significant correlations
+  filter(abs(p_adj) < 0.05) %>%
+  filter(abs(Correlation) > 0.79) %>%
+  # only keep significant correlations
   arrange(desc(abs(Correlation)))
 length(sig_results$p_adj)
 length(unique(sig_results$HOG_ID))
@@ -72,3 +63,6 @@ length(unique(sig_results$Pathway))
 write.table(filtered_results, file = "high_corr_AH.txt", sep= "\t")
 write.table(filtered_results, file = "high_corr_disease.txt", sep= "\t")
 write.table(filtered_results, file = "high_corr_naive.txt", sep= "\t")
+write.table(sig_results, file = "high_corr_dis_all.txt", sep= "\t")
+
+write.table(sig_results, file = "sig_corr_dis.txt", sep= "\t")
