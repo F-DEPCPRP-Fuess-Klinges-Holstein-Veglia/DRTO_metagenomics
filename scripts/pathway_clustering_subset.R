@@ -3,20 +3,20 @@ library(tidyverse)
 setwd("~/DRTO_metaG/pathway_hog_connectivity")
 
 # Load functional abundance data (samples as rows, pathways as columns)
-func <- read.csv("abund_transpose.csv")
+func <- read.csv("abund_transpose.csv", check.names = FALSE)
 
 # Set sample class names as rownames and remove the now redundant 'Class' column
 rownames(func) <- func$Class
 func <- func %>% select(-Class)
 
 # Subset to only disease margin samples (sample names end with 'Dis')
-#func <- func[grepl("Dis$", rownames(func)), ]
+func <- func[grepl("(Dis)$", rownames(func)), ]
 
 # Subset to only naive samples
 #func <- func[grepl("(N)$", rownames(func)), ]
 
 # Subset to only apparently healthy samples, including AH samples on D colonies (sample names end with 'N' or 'AH')
-func <- func[grepl("(Dis-AH|AH)$", rownames(func)), ]
+#func <- func[grepl("(Dis-AH|AH)$", rownames(func)), ]
 
 # Remove the first column if it contains "Unassigned" pathway label (double-check this assumption)
 func <- func %>% select(-1)
@@ -31,7 +31,7 @@ func_dist <- as.dist(1 - func_cor_matrix)
 hc <- hclust(func_dist, method = "average")
 
 # Cut the dendrogram to form clusters (r > 0.9 → h = 0.1)
-clusters <- cutree(hc, h = 0.1)
+clusters <- cutree(hc, h = 0.2)
 
 # Create a dataframe mapping pathways to their cluster ID
 func_clusters <- data.frame(Pathway = names(clusters), Cluster = clusters)
@@ -66,4 +66,4 @@ rm(func_cluster_avg)
 rownames(func_cluster_avg_labeled) <- paste0("Cluster_", func_cluster_avg_labeled$Cluster)
 func_cluster_avg_labeled <- func_cluster_avg_labeled %>% select(-Cluster)
 
-write.table(func_cluster_avg_labeled, file = "functional_pathway_clusters_AH.txt", sep = "\t")
+write.table(func_cluster_avg_labeled, file = "functional_pathway_clusters_all.txt", sep = "\t")
